@@ -61,7 +61,7 @@ print("\n=== git push ===")
 run("git push -u origin main --force")
 
 print("\n=== Vercel deploy ===")
-run(f"VERCEL_TOKEN={VERCEL_TOKEN} npx vercel --token {VERCEL_TOKEN} --prod --yes --scope ailedizimiorg-3695")
+run(f"VERCEL_TOKEN={VERCEL_TOKEN} npx vercel --token {VERCEL_TOKEN} --prod --yes")
 
 print("\n=== DONE ===")
 print("CineRealm deployed to: https://cinerealm.app")
