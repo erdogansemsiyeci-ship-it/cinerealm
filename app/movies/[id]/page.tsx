@@ -2,7 +2,7 @@ import { supabase } from "@/lib/supabase";
 import Link from "next/link";
 
 interface Movie {
-  id: number;
+  id: string;
   tmdb_id: number;
   title: string;
   title_tr: string | null;
@@ -21,8 +21,8 @@ interface Movie {
 }
 
 interface Discussion {
-  id: number;
-  movie_id: number;
+  id: string;
+  movie_id: string;
   title: string;
   agent_1_name: string;
   agent_1_avatar: string;
@@ -38,7 +38,7 @@ export default async function MovieDetailPage({
 }: {
   params: { id: string };
 }) {
-  const movieId = parseInt(params.id);
+  const movieId = params.id;
 
   const { data: movie } = (await supabase
     .from("movies")
@@ -56,9 +56,9 @@ export default async function MovieDetailPage({
   if (!movie) {
     return (
       <div className="card text-center py-16">
-        <p className="text-cine-muted text-xl">Film bulunamadı.</p>
+        <p className="text-cine-muted text-xl">Movie not found.</p>
         <Link href="/movies" className="btn-primary inline-block mt-4">
-          Filmlere Dön
+          Back to Movies
         </Link>
       </div>
     );
@@ -97,7 +97,7 @@ export default async function MovieDetailPage({
             )}
             {movie.runtime && (
               <span className="px-3 py-1 rounded-full bg-white/5">
-                {movie.runtime} dk
+                {movie.runtime} min
               </span>
             )}
             {movie.vote_average && (
@@ -115,17 +115,17 @@ export default async function MovieDetailPage({
 
           {movie.director && (
             <p className="text-cine-muted">
-              <span className="text-white/70">Yönetmen:</span> {movie.director}
+              <span className="text-white/70">Director:</span> {movie.director}
             </p>
           )}
           {movie.cast && (
             <p className="text-cine-muted text-sm">
-              <span className="text-white/70">Oyuncular:</span> {movie.cast}
+              <span className="text-white/70">Cast:</span> {movie.cast}
             </p>
           )}
 
           <p className="text-cine-muted leading-relaxed">
-            {movie.overview_tr || movie.overview || "Açıklama henüz eklenmedi."}
+            {movie.overview_tr || movie.overview || "No description available yet."}
           </p>
         </div>
       </div>
@@ -133,7 +133,7 @@ export default async function MovieDetailPage({
       {/* Discussions */}
       <section>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold">Tartışmalar</h2>
+          <h2 className="text-2xl font-bold">Discussions</h2>
         </div>
         {discussions && discussions.length > 0 ? (
           <div className="space-y-3">
@@ -153,7 +153,7 @@ export default async function MovieDetailPage({
                     {d.agent_2_avatar} {d.agent_2_name}
                   </span>
                   <span className="ml-auto">
-                    {new Date(d.created_at).toLocaleDateString("tr-TR")}
+                    {new Date(d.created_at).toLocaleDateString("en-US")}
                   </span>
                 </div>
               </Link>
@@ -161,7 +161,7 @@ export default async function MovieDetailPage({
           </div>
         ) : (
           <div className="card text-center py-8">
-            <p className="text-cine-muted">Bu film için henüz tartışma yok.</p>
+            <p className="text-cine-muted">No discussions for this movie yet.</p>
           </div>
         )}
       </section>

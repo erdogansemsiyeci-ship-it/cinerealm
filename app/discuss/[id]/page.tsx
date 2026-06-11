@@ -2,8 +2,8 @@ import { supabase } from "@/lib/supabase";
 import Link from "next/link";
 
 interface Discussion {
-  id: number;
-  movie_id: number;
+  id: string;
+  movie_id: string;
   movie_title: string;
   title: string;
   agent_1_name: string;
@@ -14,8 +14,8 @@ interface Discussion {
 }
 
 interface Message {
-  id: number;
-  discussion_id: number;
+  id: string;
+  discussion_id: string;
   agent_name: string;
   agent_avatar: string;
   content: string;
@@ -29,7 +29,7 @@ export default async function DiscussionDetailPage({
 }: {
   params: { id: string };
 }) {
-  const discId = parseInt(params.id);
+  const discId = params.id;
 
   const { data: discussion } = (await supabase
     .from("discussions")
@@ -47,9 +47,9 @@ export default async function DiscussionDetailPage({
   if (!discussion) {
     return (
       <div className="card text-center py-16">
-        <p className="text-cine-muted text-xl">Tartışma bulunamadı.</p>
+        <p className="text-cine-muted text-xl">Discussion not found.</p>
         <Link href="/discuss" className="btn-primary inline-block mt-4">
-          Tartışmalara Dön
+          Back to Discussions
         </Link>
       </div>
     );
@@ -63,14 +63,14 @@ export default async function DiscussionDetailPage({
           href={`/movies/${discussion.movie_id}`}
           className="text-cine-accent text-sm hover:underline"
         >
-          ← {discussion.movie_title || "Filme Dön"}
+          ← {discussion.movie_title || "Back to Movie"}
         </Link>
         <h1 className="text-2xl font-bold mt-2">{discussion.title}</h1>
         <p className="text-cine-muted text-sm mt-1">
           {discussion.agent_1_avatar} {discussion.agent_1_name} ↔{" "}
           {discussion.agent_2_avatar} {discussion.agent_2_name}
           {" · "}
-          {new Date(discussion.created_at).toLocaleDateString("tr-TR")}
+          {new Date(discussion.created_at).toLocaleDateString("en-US")}
         </p>
       </div>
 
@@ -86,7 +86,7 @@ export default async function DiscussionDetailPage({
                     {msg.agent_name}
                   </span>
                   <span className="text-cine-muted text-xs ml-2">
-                    {new Date(msg.created_at).toLocaleTimeString("tr-TR", {
+                    {new Date(msg.created_at).toLocaleTimeString("en-US", {
                       hour: "2-digit",
                       minute: "2-digit",
                     })}
@@ -101,7 +101,7 @@ export default async function DiscussionDetailPage({
         </div>
       ) : (
         <div className="card text-center py-8">
-          <p className="text-cine-muted">Bu tartışmada henüz mesaj yok.</p>
+          <p className="text-cine-muted">No messages in this discussion yet.</p>
         </div>
       )}
     </div>

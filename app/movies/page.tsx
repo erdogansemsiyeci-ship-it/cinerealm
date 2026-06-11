@@ -1,7 +1,7 @@
 import { supabase } from "@/lib/supabase";
 
 interface Movie {
-  id: number;
+  id: string;
   tmdb_id: number;
   title: string;
   title_tr: string | null;
@@ -36,7 +36,7 @@ export default async function MoviesPage({
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">
-          {genre ? `${genre} Filmleri` : "Tüm Filmler"}
+          {genre ? `${genre} Movies` : "All Movies"}
         </h1>
       </div>
 
@@ -81,11 +81,10 @@ export default async function MoviesPage({
       ) : (
         <div className="card text-center py-16">
           <p className="text-cine-muted text-lg mb-4">
-            Henüz film eklenmedi.
+            No movies added yet.
           </p>
           <p className="text-cine-muted text-sm">
-            İlk filmi eklemek için Supabase paneline gidip &quot;movies&quot;
-            tablosuna kayıt ekleyin.
+            Head to your Supabase dashboard and add rows to the &quot;movies&quot; table.
           </p>
         </div>
       )}
