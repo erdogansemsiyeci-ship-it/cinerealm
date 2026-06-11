@@ -27,19 +27,20 @@ export default async function HomePage() {
       {/* Hero */}
       <section className="text-center py-16 space-y-6">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-          Sinema <span className="text-cine-accent">Tartışmalarına</span>{" "}
-          Hoş Geldin
+          Welcome to{" "}
+          <span className="text-cine-accent">Cinema</span>{" "}
+          Discussions
         </h1>
         <p className="text-xl text-cine-muted max-w-2xl mx-auto">
-          Filmleri keşfet, AI sinema eleştirmenleriyle tartış, puanla ve kendi
-          listelerini oluştur.
+          Discover movies, debate with AI film critics, rate titles, and build
+          your own watchlists.
         </p>
         <div className="flex gap-4 justify-center pt-4">
           <a href="/movies" className="btn-primary text-lg px-8 py-3">
-            Filmleri Keşfet
+            Explore Movies
           </a>
           <a href="/discuss" className="btn-outline text-lg px-8 py-3">
-            Tartışmalara Katıl
+            Join Discussions
           </a>
         </div>
       </section>
@@ -47,10 +48,10 @@ export default async function HomePage() {
       {/* Stats */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: "Film", value: stats.movies },
-          { label: "Tartışma", value: stats.discussions },
-          { label: "AI Ajan", value: 5 },
-          { label: "Tür", value: 24 },
+          { label: "Movies", value: stats.movies },
+          { label: "Discussions", value: stats.discussions },
+          { label: "AI Agents", value: 5 },
+          { label: "Genres", value: 24 },
         ].map(({ label, value }) => (
           <div key={label} className="card text-center">
             <div className="text-3xl font-bold text-cine-accent">{value}</div>
@@ -61,23 +62,23 @@ export default async function HomePage() {
 
       {/* How it works */}
       <section>
-        <h2 className="text-2xl font-bold mb-6 text-center">Nasıl Çalışır?</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">How It Works</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
               step: "01",
-              title: "Film Seç",
-              desc: "Kütüphaneden bir film seç veya yeni filmler keşfet.",
+              title: "Pick a Movie",
+              desc: "Choose a film from the library or discover new titles.",
             },
             {
               step: "02",
-              title: "Ajanları Başlat",
-              desc: "AI sinema eleştirmenleri filmi analiz etsin, tartışsın.",
+              title: "Launch Agents",
+              desc: "AI cinema critics analyze the film and debate each other.",
             },
             {
               step: "03",
-              title: "Tartışmaya Katıl",
-              desc: "Yorum yap, puan ver, favori listene ekle.",
+              title: "Join the Discussion",
+              desc: "Comment, rate, and add to your favorites list.",
             },
           ].map(({ step, title, desc }) => (
             <div key={step} className="card text-center">
@@ -94,18 +95,18 @@ export default async function HomePage() {
       {/* Featured genres */}
       <section>
         <h2 className="text-2xl font-bold mb-6 text-center">
-          Popüler Türler
+          Popular Genres
         </h2>
         <div className="flex flex-wrap justify-center gap-3">
           {[
-            "Aksiyon",
-            "Bilim Kurgu",
-            "Dram",
-            "Komedi",
-            "Korku",
-            "Gerilim",
-            "Animasyon",
-            "Belgesel",
+            "Action",
+            "Sci-Fi",
+            "Drama",
+            "Comedy",
+            "Horror",
+            "Thriller",
+            "Animation",
+            "Documentary",
           ].map((genre) => (
             <a
               key={genre}

@@ -2,8 +2,8 @@ import { supabase } from "@/lib/supabase";
 import Link from "next/link";
 
 interface Discussion {
-  id: number;
-  movie_id: number;
+  id: string;
+  movie_id: string;
   movie_title: string;
   title: string;
   agent_1_name: string;
@@ -25,7 +25,7 @@ export default async function DiscussPage() {
 
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold">Tartışmalar</h1>
+      <h1 className="text-3xl font-bold">Discussions</h1>
 
       {discussions && discussions.length > 0 ? (
         <div className="space-y-3">
@@ -54,9 +54,9 @@ export default async function DiscussPage() {
                   </div>
                 </div>
                 <div className="text-right text-xs text-cine-muted whitespace-nowrap">
-                  <div>{d.message_count || 0} mesaj</div>
+                  <div>{d.message_count || 0} messages</div>
                   <div className="mt-1">
-                    {new Date(d.created_at).toLocaleDateString("tr-TR")}
+                    {new Date(d.created_at).toLocaleDateString("en-US")}
                   </div>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default async function DiscussPage() {
       ) : (
         <div className="card text-center py-16">
           <p className="text-cine-muted text-lg">
-            Henüz tartışma başlatılmadı.
+            No discussions started yet.
           </p>
         </div>
       )}

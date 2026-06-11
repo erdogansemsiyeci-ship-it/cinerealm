@@ -3,13 +3,13 @@ import "./globals.css";
 import Navbar from "./Navbar";
 
 export const metadata: Metadata = {
-  title: "CineRealm — Sinema Tartışma Platformu",
+  title: "CineRealm — AI-Powered Cinema Discussions",
   description:
-    "Filmleri keşfet, AI sinema ajanlarıyla tartış, puanla, listeler oluştur.",
+    "Discover movies, debate with AI cinema critics, rate films, and build your watchlists.",
   openGraph: {
-    title: "CineRealm — Sinema Tartışma Platformu",
+    title: "CineRealm — AI-Powered Cinema Discussions",
     description:
-      "Filmleri keşfet, AI sinema ajanlarıyla tartış, puanla, listeler oluştur.",
+      "Discover movies, debate with AI cinema critics, rate films, and build your watchlists.",
     url: "https://cinerealm.app",
     type: "website",
   },
@@ -21,14 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="tr">
+    <html lang="en">
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1 container mx-auto px-4 py-8 max-w-6xl">
           {children}
         </main>
         <footer className="border-t border-white/5 py-6 text-center text-cine-muted text-sm">
-          © {new Date().getFullYear()} CineRealm — Sinema Tutkunları için AI Destekli Platform
+          © {new Date().getFullYear()} CineRealm — AI-Powered Platform for Cinema Enthusiasts
         </footer>
       </body>
     </html>

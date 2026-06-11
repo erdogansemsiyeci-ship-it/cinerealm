@@ -2,47 +2,47 @@ const agents = [
   {
     name: "Serra",
     avatar: "🎭",
-    role: "Dram Analisti",
-    style: "Karakter derinliği, duygusal yapı, senaryo yapısı",
-    bio: "Tiyatro kökenli eleştirmen. Karakter gelişimini ve hikaye anlatımının duygusal katmanlarını inceler.",
+    role: "Drama Analyst",
+    style: "Character depth, emotional arc, screenplay structure",
+    bio: "Theater-trained critic. Examines character development and the emotional layers of storytelling.",
   },
   {
     name: "Kaan",
     avatar: "🎬",
-    role: "Teknik Yönetmen",
-    style: "Sinematografi, kurgu, ses tasarımı, görsel dil",
-    bio: "Film okulu mezunu yönetmen adayı. Teknik detaylara ve görsel anlatıma odaklanır.",
+    role: "Technical Director",
+    style: "Cinematography, editing, sound design, visual language",
+    bio: "Film school graduate and aspiring director. Focuses on technical details and visual storytelling.",
   },
   {
     name: "Mira",
     avatar: "🤖",
-    role: "Bilim Kurgu Uzmanı",
-    style: "Dünya inşası, teknoloji tutarlılığı, spekülatif kurgu",
-    bio: "Fizikçi ve bilim kurgu yazarı. Bilimsel doğruluk ve dünya tasarımı konularında uzman.",
+    role: "Sci-Fi Specialist",
+    style: "World-building, technological consistency, speculative fiction",
+    bio: "Physicist and sci-fi author. Expert in scientific accuracy and fictional world design.",
   },
   {
     name: "Doruk",
     avatar: "🎸",
-    role: "Kült Eleştirmen",
-    style: "Bağımsız filmler, kült klasikler, deneysel sinema",
-    bio: "Sinematek müdavimi. Ana akım dışı filmlere ve alternatif anlatılara tutkulu.",
+    role: "Cult Critic",
+    style: "Independent films, cult classics, experimental cinema",
+    bio: "Cinematheque regular. Passionate about off-mainstream films and alternative narratives.",
   },
   {
     name: "Lale",
     avatar: "🎨",
-    role: "Sanat Yönetmeni",
-    style: "Prodüksiyon tasarımı, kostüm, renk paleti, dönem estetiği",
-    bio: "Sanat tarihçisi. Film estetiğini dönemsel ve kültürel bağlamda değerlendirir.",
+    role: "Art Director",
+    style: "Production design, costume, color palette, period aesthetics",
+    bio: "Art historian. Evaluates film aesthetics within historical and cultural context.",
   },
 ];
 
 export default function AgentsPage() {
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold">AI Sinema Ajanları</h1>
+      <h1 className="text-3xl font-bold">AI Cinema Agents</h1>
       <p className="text-cine-muted max-w-2xl">
-        Her ajan farklı bir perspektiften filmleri analiz eder. İki ajan bir
-        film hakkında tartışırken sinemanın farklı boyutlarını keşfedin.
+        Each agent analyzes films from a distinct perspective. Watch two agents
+        debate a movie and discover cinema through different lenses.
       </p>
 
       <div className="grid md:grid-cols-2 gap-4">
@@ -57,7 +57,7 @@ export default function AgentsPage() {
                 </p>
                 <p className="text-cine-muted text-sm mt-2">{agent.bio}</p>
                 <div className="mt-3">
-                  <span className="text-xs text-cine-muted">Odak: </span>
+                  <span className="text-xs text-cine-muted">Focus: </span>
                   <span className="text-xs">{agent.style}</span>
                 </div>
               </div>

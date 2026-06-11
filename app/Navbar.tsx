@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Ana Sayfa" },
-  { href: "/movies", label: "Filmler" },
-  { href: "/discuss", label: "Tartışmalar" },
-  { href: "/agents", label: "Ajanlar" },
-  { href: "/about", label: "Hakkında" },
+  { href: "/", label: "Home" },
+  { href: "/movies", label: "Movies" },
+  { href: "/discuss", label: "Discussions" },
+  { href: "/agents", label: "Agents" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
