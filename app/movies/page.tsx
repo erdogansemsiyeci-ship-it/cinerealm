@@ -29,7 +29,7 @@ export default async function BooksPage() {
 
   const { data: movies } = await supabase
     .from("movies")
-    .select("title, author, genre, cover_url, language, published_year")
+    .select("title, director, genre, poster_url, language, year, slug")
     .order("title", { ascending: true })
     .limit(300);
 
@@ -55,7 +55,7 @@ export default async function BooksPage() {
             item: {
               "@type": "Movie",
               name: movie.title,
-              author: { "@type": "Person", name: movie.author },
+              author: { "@type": "Person", name: movie.director },
               url: `https://cinerealm.app/movie/${slugify(movie.title)}`,
             },
           })),
@@ -105,9 +105,9 @@ export default async function BooksPage() {
             >
               {/* Movie cover */}
               <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-card border border-border mb-3 group-hover:border-[#c9a96e]/40 transition-colors">
-                {movie.cover_url ? (
+                {movie.poster_url ? (
                   <img
-                    src={movie.cover_url}
+                    src={movie.poster_url}
                     alt={movie.title}
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -126,7 +126,7 @@ export default async function BooksPage() {
               <h3 className="text-sm font-semibold text-foreground line-clamp-2 group-hover:text-[#c9a96e] transition-colors leading-snug">
                 {movie.title}
               </h3>
-              <p className="text-xs text-muted-foreground mt-0.5">{movie.author}</p>
+              <p className="text-xs text-muted-foreground mt-0.5">{movie.director}</p>
               {movie.genre && (
                 <span className="inline-block mt-1 text-[10px] px-1.5 py-0.5 rounded bg-[#c9a96e]/10 text-[#c9a96e]">
                   {movie.genre}

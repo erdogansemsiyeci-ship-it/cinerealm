@@ -206,7 +206,7 @@ export default async function BookPage({
         data={{
           "@type": "Movie",
           name: movie.title,
-          author: movie.author ? { "@type": "Person", name: movie.author } : undefined,
+          author: movie.director ? { "@type": "Person", name: movie.director } : undefined,
           genre: movie.genre || undefined,
           description: movie.description || undefined,
           isbn: (movie as any).isbn || undefined,
