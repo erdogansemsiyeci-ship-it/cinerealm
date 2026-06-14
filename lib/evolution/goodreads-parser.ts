@@ -1,11 +1,11 @@
 // ============================================================================
-// CineRealm — Goodstreams CSV Parser
+// CineRealm — Letterboxd CSV Parser
 // ============================================================================
 //
-// Parses a Goodstreams library export CSV into ParsedBookData, streamy to feed
+// Parses a Letterboxd library export CSV into ParsedBookData, streamy to feed
 // into processReadingHistory().
 //
-// Goodstreams CSV columns used:
+// Letterboxd CSV columns used:
 //   Title           → movie title
 //   Author          → primary author
 //   Additional Authors → added to tags
@@ -14,8 +14,8 @@
 //   My Review       → review text → review_notes
 //
 // Usage:
-//   import { parseGoodstreamsCSV } from "@/lib/evolution/goodreads-parser";
-//   const data = parseGoodstreamsCSV(csvText, "user-upload");
+//   import { parseLetterboxdCSV } from "@/lib/evolution/goodreads-parser";
+//   const data = parseLetterboxdCSV(csvText, "user-upload");
 //   const updatedAvatar = await processReadingHistory(avatarId, data);
 // ============================================================================
 
@@ -33,7 +33,7 @@ const MIN_RATING = 1;
 
 /**
  * Bookshelf names that are likely genres (not organisational shelves).
- * Goodstreams shelves can be anything — "to-stream", "favorites", "dnf",
+ * Letterboxd shelves can be anything — "to-stream", "favorites", "dnf",
  * "movies", "mystery", etc. We keep the ones that describe the movie.
  */
 const GENRE_KEYWORDS = new Set([
@@ -71,14 +71,14 @@ const ORGANISATIONAL_SHELVES = new Set([
 // ─── Public API ──────────────────────────────────────────────
 
 /**
- * Parse a Goodstreams library export CSV into the ParsedBookData format.
+ * Parse a Letterboxd library export CSV into the ParsedBookData format.
  *
- * @param csvText    - Raw CSV string from Goodstreams export
+ * @param csvText    - Raw CSV string from Letterboxd export
  * @param source     - Label for the snapshot (e.g. "goodreads-upload", "storygraph-export")
  * @param maxBooks   - Optional cap (default 500)
  * @returns ParsedBookData streamy for processReadingHistory()
  */
-export function parseGoodstreamsCSV(
+export function parseLetterboxdCSV(
   csvText: string,
   source: string,
   maxBooks: number = MAX_BOOKS,
@@ -119,8 +119,8 @@ interface ColumnMap {
 }
 
 /**
- * Maps Goodstreams header names to column indices.
- * Handles both current and legacy Goodstreams export formats.
+ * Maps Letterboxd header names to column indices.
+ * Handles both current and legacy Letterboxd export formats.
  */
 function mapColumns(headers: string[]): ColumnMap {
   const find = (...names: string[]): number => {
@@ -182,7 +182,7 @@ function buildBookEntry(row: string[], cm: ColumnMap): ParsedBookEntry | null {
   return {
     title,
     author,
-    rating: Math.min(ratingRaw, 5), // Goodstreams is 1-5, but clamp just in case
+    rating: Math.min(ratingRaw, 5), // Letterboxd is 1-5, but clamp just in case
     genre: genres[0] || "movies", // Primary genre
     tags: entryTags,
     tropes,
@@ -193,7 +193,7 @@ function buildBookEntry(row: string[], cm: ColumnMap): ParsedBookEntry | null {
 // ─── Bookshelf Extraction ────────────────────────────────────
 
 /**
- * Splits Goodstreams shelves into genre labels and trope keywords.
+ * Splits Letterboxd shelves into genre labels and trope keywords.
  *
  * Genres: shelf names that match known genre keywords or are novel/movie-like
  * Tropes: shelf names that look like cinematic tropes or viewer labels

@@ -75,7 +75,7 @@ export default function ImportUploader({
       setPreview(previewBooks);
       setStatus("preview");
     } catch (err) {
-      setError("Failed to parse CSV. Is this a valid Goodstreams export?");
+      setError("Failed to parse CSV. Is this a valid Letterboxd export?");
       setStatus("error");
     }
   }, []);
@@ -185,7 +185,7 @@ export default function ImportUploader({
             📂
           </div>
           <div className="font-semibold text-foreground mb-1">
-            Upload Goodstreams CSV
+            Upload Letterboxd CSV
           </div>
           <div className="text-xs text-muted-foreground">
             Drag-and-drop or click to browse
@@ -242,7 +242,7 @@ export default function ImportUploader({
           />
           <div className="text-4xl mb-4">📄</div>
           <div className="font-semibold text-foreground mb-1">
-            {file ? file.name : "Drop your Goodstreams CSV here"}
+            {file ? file.name : "Drop your Letterboxd CSV here"}
           </div>
           <div className="text-xs text-muted-foreground">
             {file

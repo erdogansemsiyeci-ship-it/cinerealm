@@ -3,7 +3,7 @@
 // POST /api/avatars/[id]/import-history
 //
 // Accepts:
-//   1. multipart/form-data with a `file` field (Goodstreams CSV export)
+//   1. multipart/form-data with a `file` field (Letterboxd CSV export)
 //   2. application/json with ParsedBookData directly (manual entry / API integration)
 //
 // Authentication: Supabase Auth session cookie.
@@ -18,7 +18,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient as createServerClient } from "@/lib/supabase/server";
 import { getAvatarProfile, processReadingHistory } from "@/lib/evolution/avatar-evolution";
-import { parseGoodstreamsCSV } from "@/lib/evolution/goodreads-parser";
+import { parseLetterboxdCSV } from "@/lib/evolution/goodreads-parser";
 import type { AvatarProfile, ParsedBookData } from "@/types/avatar";
 
 export const runtime = "nodejs";
@@ -114,7 +114,7 @@ export async function POST(
       }
 
       const csvText = await file.text();
-      parsedBookData = parseGoodstreamsCSV(csvText, file.name.replace(/\.csv$/i, ""));
+      parsedBookData = parseLetterboxdCSV(csvText, file.name.replace(/\.csv$/i, ""));
 
       if (parsedBookData.movies.length === 0) {
         return NextResponse.json(

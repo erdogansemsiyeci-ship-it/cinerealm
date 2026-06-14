@@ -2,7 +2,7 @@
 // Route: /avatar/{id}/import
 //
 // Two-import-method upload wizard:
-//   1. Drag-and-drop Goodstreams CSV export
+//   1. Drag-and-drop Letterboxd CSV export
 //   2. Manual JSON paste
 //
 // After submission, the avatar advances from Level 1–4 to Level 3
@@ -26,17 +26,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { id } = await params;
   return {
     title: `Import Reading History — CineRealm`,
-    description: `Upload your Goodstreams library export to teach avatar ${id} your cinematic DNA.`,
-    keywords: ["import avatar", "Goodstreams", "streaming history", "CineRealm"],
+    description: `Upload your Letterboxd library export to teach avatar ${id} your cinematic DNA.`,
+    keywords: ["import avatar", "Letterboxd", "streaming history", "CineRealm"],
     openGraph: {
       title: `Import Reading History | CineRealm`,
-      description: `Upload your Goodstreams library export to teach your AI avatar your cinematic DNA.`,
+      description: `Upload your Letterboxd library export to teach your AI avatar your cinematic DNA.`,
       siteName: "CineRealm",
     },
     twitter: {
       card: "summary",
       title: `Import Reading History | CineRealm`,
-      description: `Upload your Goodstreams library export to teach your AI avatar your cinematic DNA.`,
+      description: `Upload your Letterboxd library export to teach your AI avatar your cinematic DNA.`,
     },
     alternates: { canonical: `https://cinerealm.app/avatar/${id}/import` },
     robots: "noindex, nofollow", // personal page, not for search engines
@@ -98,7 +98,7 @@ export default async function ImportHistoryPage({ params }: PageProps) {
             Teach {profile.avatar_name} what you love
           </h1>
           <p className="text-muted-foreground leading-relaxed max-w-2xl">
-            Upload your Goodstreams library export (CSV) or paste your streaming
+            Upload your Letterboxd library export (CSV) or paste your streaming
             data directly. Your avatar will learn your beloved tropes,
             cinematic preferences, dislikes, and hot buttons — advancing from
             Level {profile.level} to Level 3.
@@ -128,7 +128,7 @@ export default async function ImportHistoryPage({ params }: PageProps) {
         {/* ── Help section ──────────────────────────── */}
         <details className="mt-12 group">
           <summary className="text-sm text-muted-foreground cursor-pointer hover:text-foreground transition-colors">
-            How to export your Goodstreams library
+            How to export your Letterboxd library
           </summary>
           <div className="mt-4 p-5 rounded-lg border border-border bg-muted/30 text-sm text-muted-foreground space-y-3">
             <ol className="list-decimal list-inside space-y-2">
@@ -140,7 +140,7 @@ export default async function ImportHistoryPage({ params }: PageProps) {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  Goodstreams Import/Export
+                  Letterboxd Import/Export
                 </a>
               </li>
               <li>Click <strong>Export Library</strong></li>

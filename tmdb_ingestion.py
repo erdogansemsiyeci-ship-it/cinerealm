@@ -31,7 +31,7 @@ from supabase import create_client, Client
 # ── Load environment ──────────────────────────────────────────────
 load_dotenv()
 
-TMDB_API_KEY = os.getenv("TMDB_API_KEY", "2dca580c2a14b55200e784d157207b4d")
+TMDB_API_KEY = os.getenv("TMDB_API_KEY", "6eefa43d625870fb1362f551873649cc")
 SUPABASE_URL = os.getenv("CINE_SUPABASE_URL", "https://ucnylwlyfsbcfdntsgdq.supabase.co")
 SUPABASE_KEY = os.getenv("CINE_SUPABASE_KEY",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
