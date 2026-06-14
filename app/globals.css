@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* ⚜ BookRealm Theme — Midnight Blue + Literary Gold ⚜
+   Dark: deep parliamentary blue with champagne accents
+   Light: aged ivory manuscript with dark slate ink
+*/
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-heading: var(--heading);
+  --color-gold: #c9a96e;
+  --color-gold-light: #d4b87a;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* ── Dark Theme — Midnight Blue ──────────────────── */
+:root {
+  --background: #0A1128;           /* deep parliamentary midnight blue */
+  --foreground: #F5F0E8;           /* warm champagne cream for body text */
+  --heading: #FBBF24;              /* amber-400 — radiant gold for headings */
+  --card: #0F1A35;                 /* slightly lifted midnight */
+  --card-foreground: #F5F0E8;
+  --primary: #c9a96e;              /* classic literary gold */
+  --primary-foreground: #0A1128;   /* midnight on gold buttons */
+  --secondary: #162040;            /* muted deep navy */
+  --secondary-foreground: #F5F0E8;
+  --muted: #162040;
+  --muted-foreground: #8B95A5;     /* soft slate for secondary text */
+  --accent: rgba(201, 169, 110, 0.12);
+  --accent-foreground: #c9a96e;
+  --destructive: #ef4444;
+  --border: rgba(255, 255, 255, 0.07);
+  --input: rgba(255, 255, 255, 0.09);
+  --ring: #c9a96e;
+}
+
+/* ── Light Theme — Aged Manuscript Ivory ─────────── */
+html.light {
+  --background: #FAF9F6;           /* old book page ivory */
+  --foreground: #1E293B;           /* slate-800 — dark ink, never pure black */
+  --heading: #0F172A;              /* slate-900 — slightly deeper for headings */
+  --card: #FFFFFF;                 /* crisp white cards on ivory */
+  --card-foreground: #1E293B;
+  --primary: #B8960F;              /* deeper antique gold for light */
+  --primary-foreground: #FFFFFF;   /* white on gold buttons */
+  --secondary: #F0EDE6;            /* warm stone */
+  --secondary-foreground: #1E293B;
+  --muted: #F0EDE6;
+  --muted-foreground: #64748B;     /* slate-500 for secondary text */
+  --accent: rgba(184, 150, 15, 0.08);
+  --accent-foreground: #B8960F;
+  --destructive: #DC2626;
+  --border: rgba(0, 0, 0, 0.07);
+  --input: rgba(0, 0, 0, 0.05);
+  --ring: #B8960F;
+}
+
+/* ── Base ─────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  html {
+    @apply bg-background;
+    transition: background-color 0.3s ease;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), Georgia, serif;
+    color: var(--heading);
+  }
+}
+
+/* Gold accent ambient glow */
+.gold-gradient {
+  background: radial-gradient(ellipse at center, rgba(201, 169, 110, 0.07) 0%, transparent 70%);
+}
+html.light .gold-gradient {
+  background: radial-gradient(ellipse at center, rgba(184, 150, 15, 0.05) 0%, transparent 70%);
+}
+
+/* Custom scrollbar — midnight */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: #1E2D50; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2A3D65; }
+
+html.light ::-webkit-scrollbar-thumb { background: #D4D0C8; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #B8B4AC; }
+
+/* Smooth theme transitions */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
