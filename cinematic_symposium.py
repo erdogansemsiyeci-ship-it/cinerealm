@@ -27,14 +27,23 @@ import time
 import json
 import random
 import argparse
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional
 
 import requests
-from dotenv import load_dotenv
 from supabase import create_client, Client
 
-load_dotenv()
+# ── Resolve script directory for absolute paths ──────────────────
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Try loading .env from script dir first, then cwd
+env_path = os.path.join(SCRIPT_DIR, ".env")
+if os.path.exists(env_path):
+    from dotenv import load_dotenv
+    load_dotenv(env_path)
+else:
+    from dotenv import load_dotenv
+    load_dotenv()
 
 # ── Config ───────────────────────────────────────────────────────
 OPENROUTER_KEY = os.getenv("OPENROUTER_API_KEY", "")
@@ -47,6 +56,14 @@ SUPABASE_KEY = os.getenv("CINE_SUPABASE_KEY",
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "google/gemini-2.5-flash"
+
+# ── Rate limiting ─────────────────────────────────────────────────
+LLM_CALL_DELAY = 2.0       # seconds between LLM calls (avoids rate limits)
+DEBATE_COOLDOWN = 30.0     # seconds between debates (marathon mode)
+RATE_LIMIT_BACKOFF = 10.0  # seconds to wait on 429 response
+
+def now_utc() -> str:
+    return datetime.now(timezone.utc).isoformat()
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
@@ -112,7 +129,7 @@ AGENTS = {
 # ═══════════════════════════════════════════════════════════════════
 
 def call_llm(system_prompt: str, user_prompt: str, max_tokens: int = 600) -> str:
-    """Call OpenRouter LLM and return text response."""
+    """Call OpenRouter LLM with rate-limit cooldown and exponential backoff."""
     headers = {
         "Authorization": f"Bearer {OPENROUTER_KEY}",
         "Content-Type": "application/json",
@@ -127,19 +144,30 @@ def call_llm(system_prompt: str, user_prompt: str, max_tokens: int = 600) -> str
         "max_tokens": max_tokens,
     }
 
-    for attempt in range(3):
+    for attempt in range(5):
         try:
-            resp = requests.post(OPENROUTER_URL, headers=headers, json=body, timeout=60)
+            resp = requests.post(OPENROUTER_URL, headers=headers, json=body, timeout=90)
             if resp.status_code == 429:
-                time.sleep(5 * (attempt + 1))
+                wait = RATE_LIMIT_BACKOFF * (2 ** attempt)
+                print(f"  ⚠ Rate limited (429). Waiting {wait:.0f}s...")
+                time.sleep(wait)
+                continue
+            if resp.status_code >= 500:
+                wait = 5 * (attempt + 1)
+                print(f"  ⚠ Server error ({resp.status_code}). Retrying in {wait}s...")
+                time.sleep(wait)
                 continue
             resp.raise_for_status()
             data = resp.json()
+            # Apply inter-call delay to avoid hitting rate limits
+            time.sleep(LLM_CALL_DELAY)
             return data["choices"][0]["message"]["content"]
         except Exception as e:
-            print(f"  ⚠ LLM error (attempt {attempt+1}): {e}")
-            time.sleep(3)
-    return "[Error: LLM call failed after 3 attempts]"
+            wait = 3 * (attempt + 1)
+            print(f"  ⚠ LLM error (attempt {attempt+1}/5): {e}")
+            time.sleep(wait)
+
+    return "[Error: LLM call failed after 5 attempts]"
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -200,7 +228,7 @@ def update_session_message_count(session_id: str, count: int):
     """Update message count on session."""
     supabase.table("sessions").update({
         "message_count": count,
-        "updated_at": datetime.utcnow().isoformat(),
+        "updated_at": now_utc(),
     }).eq("id", session_id).execute()
 
 
@@ -208,7 +236,7 @@ def complete_session(session_id: str):
     """Mark session as completed."""
     supabase.table("sessions").update({
         "status": "completed",
-        "updated_at": datetime.utcnow().isoformat(),
+        "updated_at": now_utc(),
     }).eq("id", session_id).execute()
 
 
@@ -333,12 +361,21 @@ def main():
     parser = argparse.ArgumentParser(description="CineRealm Symposium Engine")
     parser.add_argument("--once", action="store_true", help="Run one debate and exit")
     parser.add_argument("--count", type=int, default=1, help="Number of debates to run")
+    parser.add_argument("--delay", type=float, default=None,
+                        help="Cooldown seconds between debates (default: 3s for --count 1, 30s for marathon)")
     args = parser.parse_args()
 
+    # Smart default: short delay for single, long for marathon
+    if args.delay is None:
+        args.delay = 3.0 if args.count <= 1 else DEBATE_COOLDOWN
+
+    start_time = datetime.now(timezone.utc)
     print("=" * 60)
     print("  CineRealm — Cinematic Symposium Engine")
     print(f"  Model: {MODEL}")
-    print(f"  Started: {datetime.now().isoformat()}")
+    print(f"  Debates: {args.count}  |  Cooldown: {args.delay}s")
+    print(f"  LLM delay: {LLM_CALL_DELAY}s  |  Backoff: {RATE_LIMIT_BACKOFF}s")
+    print(f"  Started: {start_time.isoformat()}")
     print("=" * 60)
 
     # ── Load agents from DB ─────────────────────────────────
@@ -351,6 +388,8 @@ def main():
         sys.exit(1)
 
     debates_run = 0
+    debates_failed = 0
+
     for i in range(args.count):
         # Pick a film
         film = pick_random_film()
@@ -358,25 +397,37 @@ def main():
             print("\n✅ No more undebated films. All films have been discussed!")
             break
 
+        debate_start = datetime.now(timezone.utc)
         print(f"\n{'─'*50}")
-        print(f"Debate {i+1}/{args.count}")
+        print(f"Debate {i+1}/{args.count}  [{debate_start.strftime('%H:%M:%S')}]")
         print(f"{'─'*50}")
 
         try:
             success = run_debate(film, agent_ids)
             if success:
                 debates_run += 1
+            else:
+                debates_failed += 1
         except Exception as e:
+            debates_failed += 1
             print(f"   ❌ Debate failed: {e}")
             continue
 
-        # Brief pause between debates
+        # ── Marathon cooldown with progress ETA ─────────────
         if i < args.count - 1:
-            time.sleep(3)
+            elapsed = (datetime.now(timezone.utc) - start_time).total_seconds()
+            avg_per_debate = elapsed / (i + 1) if (i + 1) > 0 else 30
+            remaining = (args.count - i - 1) * (avg_per_debate + args.delay)
+            print(f"   ⏳ Cooldown {args.delay:.0f}s  |  ~{remaining/60:.0f}min remaining")
+            time.sleep(args.delay)
 
+    # ── Final report ────────────────────────────────────────
+    total_time = (datetime.now(timezone.utc) - start_time).total_seconds()
     print(f"\n{'='*60}")
-    print(f"  ✅ Symposium complete: {debates_run} debate(s) run")
-    print(f"  Finished: {datetime.now().isoformat()}")
+    print(f"  ✅ Symposium complete")
+    print(f"  Ran: {debates_run}  |  Failed: {debates_failed}")
+    print(f"  Duration: {total_time/60:.1f} min")
+    print(f"  Finished: {now_utc()}")
     print(f"{'='*60}")
 
 
