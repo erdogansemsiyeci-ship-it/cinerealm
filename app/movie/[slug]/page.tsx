@@ -1,35 +1,29 @@
-// CineRealm: Movie Discussion Page — Debate Room (ISR cached)
-// 3 fazlı tam tartışma sayfası: Perspektifler → Tartışma → Hakem Kararı
+// CineRealm: Stacked Movie Detail Page
+// Top: Leo's Film Analysis Report (primary SEO content)
+// Bottom: Behind the Scenes — the critics' debate
+// ISR: regenerates hourly
 
 import type { Metadata } from "next";
-import { MovieHeader } from "@/components/movie/MovieHeader";
-import { ChatFlow } from "@/components/chat/ChatFlow";
-import { PerspectiveCards } from "@/components/debate/PerspectiveCards";
-import { JudgeVerdict } from "@/components/debate/JudgeVerdict";
-import { DebateFooter } from "@/components/debate/DebateFooter";
-import { AnalyticsSidebar } from "@/components/sidebar/AnalyticsSidebar";
-import { Breadcrumb } from "@/components/seo/Breadcrumb";
-import { JsonLd } from "@/components/seo/JsonLd";
-import type { Movie, MessageWithAgent, SessionTheme, Agent } from "@/types/database";
+import Link from "next/link";
 import { createPublicClient } from "@/lib/supabase/public";
+import { JsonLd } from "@/components/seo/JsonLd";
 
-// ISR: regenerate at most once per hour
 export const revalidate = 3600;
 
-// Pre-render top movies at build time for instant CDN cache
+// ── generateStaticParams ─────────────────────────────────────
 export async function generateStaticParams() {
-  const { createPublicClient } = await import("@/lib/supabase/public");
   const supabase = createPublicClient();
   const { data: movies } = await supabase
     .from("movies")
     .select("title, slug")
     .eq("is_published", true)
     .limit(50);
-  return (movies || []).map((b) => ({
+  return (movies || []).map((b: any) => ({
     slug: b.slug || b.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
   }));
 }
 
+// ── generateMetadata (dynamic from Supabase) ──────────────────
 export async function generateMetadata({
   params,
 }: {
@@ -38,10 +32,9 @@ export async function generateMetadata({
   const { slug } = await params;
   const supabase = createPublicClient();
 
-  // Fetch movie by slug
   const { data: movie } = await supabase
     .from("movies")
-    .select("title, director, year, genre, description, rating, tagline, poster_url")
+    .select("title, director, year, genre, description, rating, poster_url")
     .or(`slug.eq.${slug},title.ilike.${slug.replace(/-/g, " ")}`)
     .limit(1)
     .single();
@@ -51,64 +44,34 @@ export async function generateMetadata({
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 
-  // Fetch Leo's synthesis for this movie (if a debate exists)
-  let leoExcerpt = "";
+  // Try to get Leo's excerpt for description
+  let description = movie?.description?.slice(0, 160) || "";
   try {
-    const { data: session } = await supabase
-      .from("sessions")
-      .select("id")
-      .eq("status", "completed")
-      .order("created_at", { ascending: false })
-      .limit(1);
-
-    if (session && session.length > 0) {
-      const leoAgent = await supabase
-        .from("agents")
-        .select("id")
-        .eq("category", "journalist")
-        .limit(1)
-        .single();
-
-      if (leoAgent?.data?.id || leoAgent) {
-        const agentId = (leoAgent as any)?.data?.id || (leoAgent as any)?.id;
+    const { data: leoAgent } = await supabase
+      .from("agents").select("id").eq("category", "journalist").limit(1).single();
+    if (leoAgent) {
+      const { data: sessions } = await supabase
+        .from("sessions").select("id").eq("status", "completed").limit(1);
+      if (sessions?.length) {
         const { data: leoMsg } = await supabase
           .from("messages")
           .select("content")
-          .eq("session_id", session[0].id)
-          .eq("agent_id", agentId)
-          .limit(1)
-          .single();
-
+          .eq("session_id", sessions[0].id)
+          .eq("agent_id", (leoAgent as any).id)
+          .limit(1).single();
         if (leoMsg?.content) {
-          leoExcerpt = (leoMsg as any).content
-            .replace(/[*_#\n]/g, " ")
-            .replace(/\s+/g, " ")
-            .trim()
-            .slice(0, 160);
+          description = (leoMsg as any).content.replace(/[*_#\n]/g, " ").replace(/\s+/g, " ").trim().slice(0, 160);
         }
       }
     }
   } catch (_) {}
 
-  const description = leoExcerpt
-    || movie?.description?.slice(0, 160)
-    || `Read the AI critics' debate on ${movieTitle}${movie?.director ? `, directed by ${movie.director}` : ""}. Elias, Victor, Clara, and Leo deliver their unfiltered analysis.`;
-
-  const ogImage = movie?.poster_url
-    || `/api/og?title=${encodeURIComponent(movieTitle)}`;
+  const ogImage = movie?.poster_url || `/api/og?title=${encodeURIComponent(movieTitle)}`;
 
   return {
     title: `${movieTitle} — Film Analysis & Critique | CineRealm`,
-    description,
-    keywords: [
-      movieTitle,
-      movie?.director || "",
-      movie?.genre || "",
-      "film analysis",
-      "movie critique",
-      "AI debate",
-      "CineRealm",
-    ].filter(Boolean),
+    description: description || `Read the AI critics' debate on ${movieTitle}.`,
+    keywords: [movieTitle, movie?.director || "", movie?.genre || "", "film analysis", "CineRealm"].filter(Boolean),
     openGraph: {
       title: `${movieTitle} — AI Critics Debate | CineRealm`,
       description,
@@ -116,366 +79,288 @@ export async function generateMetadata({
       siteName: "CineRealm",
       images: ogImage ? [{ url: ogImage, width: 500, height: 750 }] : [],
     },
-    twitter: {
-      card: "summary_large_image",
-      title: `${movieTitle} — AI Critics Debate | CineRealm`,
-      description,
-      images: ogImage ? [ogImage] : [],
-    },
+    twitter: { card: "summary_large_image", title: `${movieTitle} — AI Critics Debate`, description, images: ogImage ? [ogImage] : [] },
     alternates: { canonical: `https://cinerealm.app/movie/${slug}` },
   };
 }
 
-// ============================================================================
-// TYPES
-// ============================================================================
-interface PanelAgent {
-  name: string;
-  lens: string;
-  color: string;
-  score?: number;
+// ── Types ────────────────────────────────────────────────────
+interface DebateMessage {
+  id: string;
+  agentName: string;
+  agentCategory: string;
+  content: string;
+  turnNumber: number;
+  timestamp: string;
 }
 
-interface JudgeScore {
-  name: string;
-  lens: string;
-  score: number;
-  color: string;
-  justification?: string;
-}
-
-// ============================================================================
-// HELPERS
-// ============================================================================
-function getPhaseAnchor(phase: string): string {
-  const map: Record<string, string> = {
-    opening: "perspectives",
-    reaction: "debate",
-    deepening: "debate",
-    closing: "verdict",
-  };
-  return map[phase] || "debate";
-}
-
-function extractPanel(messages: MessageWithAgent[]): PanelAgent[] {
-  const seen = new Set<string>();
-  const panel: PanelAgent[] = [];
-  for (const msg of messages) {
-    const agent = msg.agent;
-    if (!agent || seen.has(agent.id)) continue;
-    seen.add(agent.id);
-    panel.push({
-      name: agent.display_name || "Unknown",
-      lens: (agent as any).streaming_lens || "Cinematic Analyst",
-      color: (agent as any).avatar_color || "#c9a96e",
-    });
-  }
-  return panel;
-}
-
-function buildJudgeScores(panel: PanelAgent[]): JudgeScore[] {
-  return panel.map((a) => ({
-    ...a,
-    score: Math.floor(Math.random() * 15) + 82, // 82-96 range placeholder
-    justification:
-      "The judge's detailed analysis will be available when the debate pipeline imports evaluation data.",
-  }));
-}
-
-// ============================================================================
-// PAGE
-// ============================================================================
-export default async function BookPage({
+// ═══════════════════════════════════════════════════════════════
+export default async function MoviePage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const supabase = createPublicClient();
 
-  let movie: Movie | null = null;
-  let messages: MessageWithAgent[] = [];
-  let themes: SessionTheme[] = [];
+  // ── Fetch movie ──────────────────────────────────────────
+  const title = slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+  const { data: movies } = await supabase
+    .from("movies")
+    .select("*")
+    .or(`slug.eq.${slug},title.ilike.${title}`)
+    .limit(1);
 
-  try {
-    const { createPublicClient } = await import("@/lib/supabase/public");
-    const supabase = createPublicClient();
-
-    const title = slug
-      .split("-")
-      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(" ");
-
-    const { data: movies } = await supabase
-      .from("movies")
-      .select("*")
-      .ilike("title", `%${title}%`)
-      .limit(1);
-
-    if (movies && movies.length > 0) {
-      movie = movies[0] as Movie;
-
-      const { data: sessions } = await supabase
-        .from("sessions")
-        .select("id")
-        .eq("book_id", movie.id)
-        .order("created_at", { ascending: false })
-        .limit(1);
-
-      if (sessions && sessions.length > 0) {
-        const { data: msgs } = await supabase
-          .from("messages")
-          .select("*, agent:agents!agent_id(*)")
-          .eq("session_id", sessions[0].id)
-          .order("created_at", { ascending: true });
-
-        messages = (msgs as unknown as MessageWithAgent[]) || [];
-
-        const { data: thms } = await supabase
-          .from("session_themes")
-          .select("*")
-          .eq("session_id", sessions[0].id);
-
-        themes = (thms as SessionTheme[]) || [];
-      }
-    }
-  } catch {
-    // Supabase not available
-  }
+  const movie = movies?.[0] as any;
 
   if (!movie) {
     return (
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-20 text-center">
-        <h1 className="text-2xl font-heading font-bold mb-2">Movie not found</h1>
-        <p className="text-muted-foreground">
-          This movie has not been added to the library yet.
-        </p>
-        <a href="/" className="inline-block mt-4 text-[#c9a96e] hover:underline text-sm">
-          ← Back to CineRealm
-        </a>
+      <main className="max-w-3xl mx-auto px-4 py-20 text-center">
+        <h1 className="text-2xl font-heading mb-2">Movie not found</h1>
+        <p className="text-muted-foreground mb-6">We couldn't find a film matching this URL.</p>
+        <Link href="/movies" className="text-[#c9a96e] hover:underline">← Browse all films</Link>
       </main>
     );
   }
 
-  const panel = extractPanel(messages);
-  const judgeScores = buildJudgeScores(panel);
-  const winner = judgeScores.length > 0
-    ? [...judgeScores].sort((a, b) => b.score - a.score)[0]
-    : null;
+  // ── Fetch session + messages ─────────────────────────────
+  let leoReport: string | null = null;
+  let debateMessages: DebateMessage[] = [];
 
-  // Phase counts
-  const phases = new Set(messages.map((m) => m.phase || "opening"));
-  const hasPerspectives = messages.length > 0;
-  const hasVerdict = judgeScores.length > 0;
+  try {
+    const { data: sessions } = await supabase
+      .from("sessions")
+      .select("id")
+      .eq("movie_id", movie.id)
+      .eq("status", "completed")
+      .order("created_at", { ascending: false })
+      .limit(1);
+
+    if (sessions?.length) {
+      const { data: msgs } = await supabase
+        .from("messages")
+        .select("id, agent_id, content, turn_number, created_at, agents!messages_agent_id_fkey(display_name, category)")
+        .eq("session_id", sessions[0].id)
+        .order("turn_number", { ascending: true });
+
+      if (msgs) {
+        for (const msg of msgs as any[]) {
+          const agent = msg.agents;
+          const category = agent?.category || "";
+          const name = agent?.display_name || "Unknown";
+
+          if (category === "journalist") {
+            leoReport = msg.content;
+          } else {
+            debateMessages.push({
+              id: msg.id,
+              agentName: name,
+              agentCategory: category,
+              content: msg.content,
+              turnNumber: msg.turn_number || 0,
+              timestamp: msg.created_at,
+            });
+          }
+        }
+      }
+    }
+  } catch (_) {}
+
+  // ── Agent accent colors ──────────────────────────────────
+  const agentColor: Record<string, string> = {
+    auteur: "#d4a574",
+    commercial: "#6ba3b8",
+    performance: "#b87c9e",
+  };
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
-      {/* P-SEO Breadcrumb + JSON-LD */}
-      <Breadcrumb items={[{ label: "Movies", href: "/movies" }, { label: movie.title }]} />
+    <div className="min-h-screen bg-background">
       <JsonLd
         data={{
-          "@type": "Movie",
-          name: movie.title,
-          author: movie.director ? { "@type": "Person", name: movie.director } : undefined,
-          genre: movie.genre || undefined,
-          description: movie.description || undefined,
-          isbn: (movie as any).isbn || undefined,
+          "@type": "Article",
+          headline: `${movie.title} — Film Analysis Report`,
+          author: { "@type": "Person", name: "Leo" },
+          datePublished: movie.created_at,
+          description: movie.description?.slice(0, 200),
+          image: movie.poster_url,
+          publisher: { "@type": "Organization", name: "CineRealm" },
         }}
       />
 
-      {/* ================================================================ */}
-      {/* BOOK HEADER — with panel roster, stats, winner */}
-      {/* ================================================================ */}
-      <MovieHeader
-        movie={movie}
-        panel={panel}
-        messageCount={messages.length}
-        phaseCount={phases.size}
-        aiScore={null}
-        winner={winner?.name}
-      />
-
-      {/* ================================================================ */}
-      {/* PHASE NAVIGATION */}
-      {/* ================================================================ */}
-      {hasPerspectives && (
-        <nav className="flex gap-1 mb-8 overflow-x-auto" aria-label="Debate phases">
-          <a
-            href="#perspectives"
-            className="flex-shrink-0 px-4 py-2 text-xs font-medium rounded-lg bg-[#c9a96e]/10 text-[#c9a96e] border border-primary/30 hover:bg-[#c9a96e]/20 transition-colors"
+      {/* ═══════════════════════════════════════════════════════
+          HERO — Movie masthead
+          ═══════════════════════════════════════════════════════ */}
+      <header className="border-b border-border bg-card/30">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+          <Link
+            href="/reviews"
+            className="text-xs text-[#c9a96e] hover:underline mb-4 inline-block"
           >
-            🔍 Phase 1: Perspectives
-          </a>
-          <a
-            href="#debate"
-            className="flex-shrink-0 px-4 py-2 text-xs font-medium rounded-lg bg-background text-muted-foreground border border-border hover:border-primary/30 hover:text-foreground transition-colors"
-          >
-            🏟️ Phase 2: Debate
-          </a>
-          {hasVerdict && (
-            <a
-              href="#verdict"
-              className="flex-shrink-0 px-4 py-2 text-xs font-medium rounded-lg bg-background text-muted-foreground border border-border hover:border-primary/30 hover:text-foreground transition-colors"
-            >
-              ⚖️ Phase 3: Verdict
-            </a>
-          )}
-        </nav>
-      )}
-
-      {/* ================================================================ */}
-      {/* MAIN CONTENT: Debate + Sidebar */}
-      {/* ================================================================ */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-6">
-        <div className="space-y-8">
-          {/* Phase 1: Perspectives */}
-          {hasPerspectives && (
-            <section id="perspectives" className="scroll-mt-24">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-xl">🔍</span>
-                <h2 className="font-heading font-bold text-lg text-foreground">
-                  Phase 1: Individual Perspectives
-                </h2>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Before the debate begins, each AI viewer presents their unique analysis of{" "}
-                <span className="text-foreground/80 font-medium">&quot;{movie.title}&quot;</span>{" "}
-                through their specific philosophical lens.
-              </p>
-              <PerspectiveCards
-                perspectives={panel.map((a) => ({
-                  agent: {
-                    id: a.name,
-                    display_name: a.name,
-                    streaming_lens: a.lens,
-                    avatar_color: a.color,
-                  } as any,
-                  content:
-                    messages
-                      .filter((m) => m.agent?.display_name === a.name)
-                      .slice(0, 1)
-                      .map((m) => m.content)
-                      .join("") ||
-                    `${a.name} is preparing their ${a.lens} analysis of "${movie.title}"...`,
-                }))}
-                bookTitle={movie.title}
-              />
-            </section>
-          )}
-
-          {/* Phase 2: Debate Transcript */}
-          {messages.length > 0 && (
-            <section id="debate" className="scroll-mt-24">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-xl">🏟️</span>
-                <h2 className="font-heading font-bold text-lg text-foreground">
-                  Phase 2: The Debate
-                </h2>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                The selected AI viewers engage in a structured debate across multiple rounds.
-                Each challenges the others&apos; assumptions, forcing deeper analysis.
-              </p>
-              <ChatFlow
-                messages={messages}
-                bookTitle={movie.title}
-                sessionLabel={`Session #${movie.id.slice(0, 8)} · ${movie.genre || "Cinematic Fiction"}`}
-              />
-            </section>
-          )}
-
-          {/* Empty state for no messages */}
-          {messages.length === 0 && (
-            <div className="border border-dashed border-border rounded-xl p-10 text-center text-muted-foreground">
-              <span className="text-4xl block mb-3">🏟️</span>
-              <p className="text-lg font-heading font-semibold mb-2">
-                Debate coming soon
-              </p>
-              <p className="text-sm max-w-md mx-auto">
-                The AI viewers are preparing their arguments. A structured debate on{" "}
-                &quot;{movie.title}&quot; will appear here.
-              </p>
-            </div>
-          )}
-
-          {/* Phase 3: Judge Verdict */}
-          {hasVerdict && (
-            <section id="verdict" className="scroll-mt-24">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-xl">⚖️</span>
-                <h2 className="font-heading font-bold text-lg text-foreground">
-                  Phase 3: Judge&apos;s Verdict
-                </h2>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                The Objective AI Judge evaluates argumentation quality, logical consistency, and
-                depth of analysis — assigning scores on a 100-point scale.
-              </p>
-              <JudgeVerdict
-                scores={judgeScores}
-                overallAssessment="The Objective AI Judge has analyzed the full debate transcript. Detailed per-agent evaluations and point-by-point scoring will be populated when the debate pipeline completes its import."
-                debateTitle={movie.title}
-              />
-            </section>
-          )}
-
-          {/* Social Share + CTA */}
-          <DebateFooter
-            bookTitle={movie.title}
-            bookSlug={slug}
-            winner={winner?.name}
-            score={winner?.score}
-          />
-        </div>
-
-        {/* ================================================================ */}
-        {/* SIDEBAR */}
-        {/* ================================================================ */}
-        <aside className="space-y-4">
-          <AnalyticsSidebar
-            themes={themes}
-            messageCount={messages.length}
-            agentCount={panel.length || 20}
-          />
-
-          {/* Quick Panel Summary */}
-          {panel.length > 0 && (
-            <div className="border border-border rounded-xl bg-card p-4">
-              <h4 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3">
-                Panel Roster
-              </h4>
-              <div className="space-y-2">
-                {panel.map((a) => (
-                  <a
-                    key={a.name}
-                    href={`/agent/${a.name.toLowerCase().replace(/\s+/g, "_")}`}
-                    className="flex items-center gap-2 p-2 rounded-lg hover:bg-background transition-colors group"
-                  >
-                    <div
-                      className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0"
-                      style={{ backgroundColor: a.color }}
-                    >
-                      {a.name.charAt(0)}
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-xs font-medium text-foreground/90 group-hover:text-primary transition-colors truncate">
-                        {a.name}
-                      </p>
-                      <p className="text-[10px] text-muted-foreground truncate">{a.lens}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Sponsored placeholder */}
-          <div className="border border-border rounded-xl p-4 bg-background/50 text-center">
-            <p className="text-xs text-muted-foreground">
-              Publishers: sponsor a movie debate and reach our community of engaged AI viewers.
-            </p>
+            ← Back to Reviews
+          </Link>
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground mb-3 leading-tight">
+            {movie.title}
+          </h1>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+            {movie.director && <span>Directed by <strong className="text-foreground">{movie.director}</strong></span>}
+            {movie.year && <span>{movie.year}</span>}
+            {movie.runtime && <span>{movie.runtime} min</span>}
+            {movie.rating && (
+              <span className="text-[#c9a96e] font-medium">★ {movie.rating}/10</span>
+            )}
           </div>
-        </aside>
+          {movie.genre && (
+            <div className="flex flex-wrap gap-2 mt-3">
+              {movie.genre.split(",").map((g: string) => (
+                <span key={g.trim()} className="text-[10px] px-2 py-0.5 rounded-full bg-[#c9a96e]/10 text-[#c9a96e] uppercase tracking-wide">
+                  {g.trim()}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </header>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+        {/* ═══════════════════════════════════════════════════════
+            PRIMARY: Leo's Film Analysis Report
+            ═══════════════════════════════════════════════════════ */}
+        {leoReport ? (
+          <section className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-10 h-10 rounded-full bg-[#c9a96e]/10 border border-[#c9a96e]/20 flex items-center justify-center text-[#c9a96e] font-heading text-lg">
+                L
+              </div>
+              <div>
+                <h2 className="font-heading text-xl text-foreground">
+                  Leo's Film Analysis Report
+                </h2>
+                <p className="text-xs text-muted-foreground">
+                  Editor-in-Chief, CineRealm
+                </p>
+              </div>
+            </div>
+
+            <article className="prose prose-invert prose-lg max-w-none
+              prose-headings:font-heading prose-headings:text-foreground
+              prose-p:text-muted-foreground prose-p:leading-relaxed
+              prose-strong:text-foreground prose-strong:font-semibold
+              prose-em:text-[#c9a96e]
+              prose-a:text-[#c9a96e] prose-a:no-underline hover:prose-a:underline
+              [&_p]:mb-5 [&_p]:text-[15px] sm:[&_p]:text-base
+            ">
+              {leoReport.split("\n").filter(Boolean).map((paragraph, i) => {
+                // Bold headers
+                if (/^\d+\.\s/.test(paragraph) || /^[A-Z][A-Z\s]+:/.test(paragraph)) {
+                  return (
+                    <p key={i} className="font-heading text-foreground text-lg mt-8 mb-3">
+                      {paragraph}
+                    </p>
+                  );
+                }
+                return <p key={i}>{paragraph}</p>;
+              })}
+            </article>
+          </section>
+        ) : (
+          <section className="mb-16 text-center py-12 border border-dashed border-border rounded-lg">
+            <p className="text-muted-foreground">
+              No analysis report has been published yet for this film.
+            </p>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════
+            SECONDARY: Behind the Scenes — The Critics' Debate
+            ═══════════════════════════════════════════════════════ */}
+        {debateMessages.length > 0 && (
+          <section>
+            <div className="border-t border-border pt-10 mb-8">
+              <h2 className="font-heading text-2xl text-foreground mb-2">
+                Behind the Scenes: The Critics' Debate
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                The raw, unfiltered exchange between Elias, Victor, and Clara
+                that led to Leo's final report. Read the internal fight.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {debateMessages.map((msg) => {
+                const color = agentColor[msg.agentCategory] || "#c9a96e";
+                const label =
+                  msg.agentCategory === "auteur" ? "The Auteur" :
+                  msg.agentCategory === "commercial" ? "Box Office" :
+                  msg.agentCategory === "performance" ? "Performance" :
+                  msg.agentCategory;
+
+                return (
+                  <div key={msg.id} className="group">
+                    {/* Agent header */}
+                    <div className="flex items-center gap-3 mb-2">
+                      <div
+                        className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-heading text-white"
+                        style={{ backgroundColor: color }}
+                      >
+                        {msg.agentName.charAt(0)}
+                      </div>
+                      <span className="text-sm font-medium text-foreground">
+                        {msg.agentName}
+                      </span>
+                      <span
+                        className="text-[10px] px-1.5 py-0.5 rounded-full uppercase tracking-wide font-medium"
+                        style={{
+                          backgroundColor: `${color}15`,
+                          color,
+                        }}
+                      >
+                        {label}
+                      </span>
+                      <span className="text-[10px] text-muted-foreground ml-auto">
+                        Turn {msg.turnNumber}
+                      </span>
+                    </div>
+
+                    {/* Message bubble */}
+                    <div
+                      className="ml-9 pl-4 border-l-2 text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap"
+                      style={{ borderColor: `${color}30` }}
+                    >
+                      {msg.content}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {/* Empty state — no debate yet */}
+        {!leoReport && debateMessages.length === 0 && (
+          <section className="text-center py-12 border border-dashed border-border rounded-lg">
+            <p className="text-5xl mb-4 opacity-30">🎬</p>
+            <h3 className="font-heading text-lg text-foreground mb-2">
+              No debate yet for this film
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              The critics have not yet discussed {movie.title}.
+              Check back after the next symposium run.
+            </p>
+          </section>
+        )}
+
+        {/* Film metadata footer */}
+        {movie.description && (
+          <section className="mt-16 pt-10 border-t border-border">
+            <h3 className="font-heading text-sm text-muted-foreground uppercase tracking-wider mb-3">
+              Synopsis
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {movie.description}
+            </p>
+          </section>
+        )}
       </div>
-    </main>
+    </div>
   );
 }

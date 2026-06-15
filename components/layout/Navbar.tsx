@@ -7,11 +7,10 @@ import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { getNavProfile, signOut } from "@/app/actions/navbar";
 
 const NAV_LINKS = [
+  { href: "/reviews", label: "Reviews" },
   { href: "/discuss", label: "Discussions" },
   { href: "/movies", label: "Movies" },
   { href: "/agents", label: "Editorial Board" },
-  { href: "/viewers", label: "Viewers" },
-  { href: "/academy", label: "Academy" },
   { href: "/about", label: "About" },
 ];
 
