@@ -107,7 +107,7 @@ export default async function HomePage() {
   // ── Latest messages (for feed) ────────────────────────────
   const { data: latestMessages } = await supabase
     .from("messages")
-    .select("id,session_id,agent_id,content,turn_number,created_at,agents(display_name,category)")
+    .select("id,session_id,agent_id,content,turn_number,created_at,agents!messages_agent_id_fkey(display_name,category)")
     .order("created_at", { ascending: false })
     .limit(12);
 
