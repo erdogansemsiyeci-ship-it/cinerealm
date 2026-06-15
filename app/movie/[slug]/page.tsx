@@ -11,6 +11,7 @@ import { AnalyticsSidebar } from "@/components/sidebar/AnalyticsSidebar";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { JsonLd } from "@/components/seo/JsonLd";
 import type { Movie, MessageWithAgent, SessionTheme, Agent } from "@/types/database";
+import { createPublicClient } from "@/lib/supabase/public";
 
 // ISR: regenerate at most once per hour
 export const revalidate = 3600;
@@ -21,11 +22,11 @@ export async function generateStaticParams() {
   const supabase = createPublicClient();
   const { data: movies } = await supabase
     .from("movies")
-    .select("title")
+    .select("title, slug")
     .eq("is_published", true)
     .limit(50);
   return (movies || []).map((b) => ({
-    slug: b.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+    slug: b.slug || b.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
   }));
 }
 
@@ -35,23 +36,91 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const title = slug
+  const supabase = createPublicClient();
+
+  // Fetch movie by slug
+  const { data: movie } = await supabase
+    .from("movies")
+    .select("title, director, year, genre, description, rating, tagline, poster_url")
+    .or(`slug.eq.${slug},title.ilike.${slug.replace(/-/g, " ")}`)
+    .limit(1)
+    .single();
+
+  const movieTitle = movie?.title || slug
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 
+  // Fetch Leo's synthesis for this movie (if a debate exists)
+  let leoExcerpt = "";
+  try {
+    const { data: session } = await supabase
+      .from("sessions")
+      .select("id")
+      .eq("status", "completed")
+      .order("created_at", { ascending: false })
+      .limit(1);
+
+    if (session && session.length > 0) {
+      const leoAgent = await supabase
+        .from("agents")
+        .select("id")
+        .eq("category", "journalist")
+        .limit(1)
+        .single();
+
+      if (leoAgent?.data?.id || leoAgent) {
+        const agentId = (leoAgent as any)?.data?.id || (leoAgent as any)?.id;
+        const { data: leoMsg } = await supabase
+          .from("messages")
+          .select("content")
+          .eq("session_id", session[0].id)
+          .eq("agent_id", agentId)
+          .limit(1)
+          .single();
+
+        if (leoMsg?.content) {
+          leoExcerpt = (leoMsg as any).content
+            .replace(/[*_#\n]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim()
+            .slice(0, 160);
+        }
+      }
+    }
+  } catch (_) {}
+
+  const description = leoExcerpt
+    || movie?.description?.slice(0, 160)
+    || `Read the AI critics' debate on ${movieTitle}${movie?.director ? `, directed by ${movie.director}` : ""}. Elias, Victor, Clara, and Leo deliver their unfiltered analysis.`;
+
+  const ogImage = movie?.poster_url
+    || `/api/og?title=${encodeURIComponent(movieTitle)}`;
+
   return {
-    title: `${title} — AI Debate Room | CineRealm`,
-    description: `AI viewers with distinct philosophical perspectives debate "${title}". Read individual analyses, the full debate transcript, and the AI judge's verdict.`,
-    keywords: [title, "AI debate", "cinematic analysis", "CineRealm", "movie discussion"],
+    title: `${movieTitle} — Film Analysis & Critique | CineRealm`,
+    description,
+    keywords: [
+      movieTitle,
+      movie?.director || "",
+      movie?.genre || "",
+      "film analysis",
+      "movie critique",
+      "AI debate",
+      "CineRealm",
+    ].filter(Boolean),
     openGraph: {
-      title: `CineRealm Debate: ${title}`,
-      description: `Structuralist vs Existentialist vs Jungian — AI viewers debate "${title}". Who wins? Read the verdict.`,
+      title: `${movieTitle} — AI Critics Debate | CineRealm`,
+      description,
+      type: "article",
+      siteName: "CineRealm",
+      images: ogImage ? [{ url: ogImage, width: 500, height: 750 }] : [],
     },
     twitter: {
       card: "summary_large_image",
-      title: `CineRealm Debate: ${title}`,
-      description: `AI viewers debate "${title}" — structuralism, existentialism, Jungian archetypes. Read the verdict.`,
+      title: `${movieTitle} — AI Critics Debate | CineRealm`,
+      description,
+      images: ogImage ? [ogImage] : [],
     },
     alternates: { canonical: `https://cinerealm.app/movie/${slug}` },
   };
