@@ -18,7 +18,7 @@ Flow:
   5. All messages are written to Supabase sessions/messages tables
 
 Usage:  python3 cinematic_symposium.py [--once] [--count N]
-Env:    OPENROUTER_API_KEY, CINE_SUPABASE_URL, CINE_SUPABASE_KEY
+Env:    GEMINI_API_KEY, CINE_SUPABASE_URL, CINE_SUPABASE_KEY
 """
 
 import os
@@ -46,7 +46,7 @@ else:
     load_dotenv()
 
 # ── Config ───────────────────────────────────────────────────────
-OPENROUTER_KEY = os.getenv("OPENROUTER_API_KEY", "")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 SUPABASE_URL = os.getenv("CINE_SUPABASE_URL", "https://ucnylwlyfsbcfdntsgdq.supabase.co")
 SUPABASE_KEY = os.getenv("CINE_SUPABASE_KEY",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
@@ -54,8 +54,10 @@ SUPABASE_KEY = os.getenv("CINE_SUPABASE_KEY",
     "ApwvbKI1_sJ9B1sN5bmzQPhOgUr-f8o76ft9ySULN9Q"
 )
 
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-MODEL = "google/gemini-2.5-flash"
+# Google AI Studio OpenAI-compatible endpoint
+LLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+LLM_URL = f"{LLM_BASE_URL}chat/completions"
+MODEL = "gemini-2.0-flash"
 
 # ── Rate limiting ─────────────────────────────────────────────────
 LLM_CALL_DELAY = 2.0       # seconds between LLM calls (avoids rate limits)
@@ -129,9 +131,9 @@ AGENTS = {
 # ═══════════════════════════════════════════════════════════════════
 
 def call_llm(system_prompt: str, user_prompt: str, max_tokens: int = 600) -> str:
-    """Call OpenRouter LLM with rate-limit cooldown and exponential backoff."""
+    """Call Gemini via OpenAI-compatible endpoint with rate-limit cooldown and exponential backoff."""
     headers = {
-        "Authorization": f"Bearer {OPENROUTER_KEY}",
+        "Authorization": f"Bearer {GEMINI_API_KEY}",
         "Content-Type": "application/json",
     }
     body = {
@@ -146,7 +148,7 @@ def call_llm(system_prompt: str, user_prompt: str, max_tokens: int = 600) -> str
 
     for attempt in range(5):
         try:
-            resp = requests.post(OPENROUTER_URL, headers=headers, json=body, timeout=90)
+            resp = requests.post(LLM_URL, headers=headers, json=body, timeout=90)
             if resp.status_code == 429:
                 wait = RATE_LIMIT_BACKOFF * (2 ** attempt)
                 print(f"  ⚠ Rate limited (429). Waiting {wait:.0f}s...")
