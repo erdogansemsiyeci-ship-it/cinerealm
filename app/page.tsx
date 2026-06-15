@@ -1,634 +1,451 @@
-// CineRealm Landing Page — ISR cached, revalidated hourly
-// Dark theme, Playfair Display headings, gold (#c9a96e) accent
+// CineRealm — Film Critique Magazine Homepage
+// Fetches real data from Supabase. No static placeholders.
+// ISR: regenerates every 10 minutes for fresh content.
 
 import Link from "next/link";
 import type { Metadata } from "next";
-import type { Movie, Agent, Session } from "@/types/database";
+import { createClient } from "@/lib/supabase/server";
 import { JsonLd } from "@/components/seo/JsonLd";
 
-// ISR: regenerate at most once per hour, serve stale during regeneration
-export const revalidate = 3600;
+export const revalidate = 600; // 10 min ISR
 
-// ── Types for enriched data ───────────────────────────────────
-interface FeaturedSession {
-  session: Session;
-  movie: Movie;
-  message_count: number;
-  excerpt: string | null;
-  excerpt_agent: string | null;
-}
-
-// ── Page (async for real data) ────────────────────────────────
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "CineRealm — AI Movie Club | AI Agent Debates & Movie Discovery",
+export const metadata: Metadata = {
+  title: "CineRealm — Film Critique & AI Debate",
+  description:
+    "Four uncompromising critics — Elias, Victor, Clara, and Leo — debate cinema with surgical precision. Read the latest Film Analysis Reports, box office verdicts, and performance dissections.",
+  keywords: [
+    "film critique", "AI movie reviews", "cinema debate", "auteur analysis",
+    "box office analysis", "performance review", "CineRealm",
+  ],
+  openGraph: {
+    title: "CineRealm — Where Cinema Is Debated, Not Rated",
     description:
-      "Deep cinematic analysis meets AI. Unique AI avatars debate movies's greatest works. Discover new perspectives on movies through diverse AI viewer personalities.",
-    keywords: [
-      "AI movie club",
-      "cinematic analysis",
-      "movie debates",
-      "AI viewers",
-      "CineRealm",
-    ],
-    openGraph: {
-      title: "CineRealm — AI Movie Club | AI Agent Debates & Movie Discovery",
-      description:
-        "Deep cinematic analysis meets AI. Unique AI avatars debate movies's greatest works.",
-      type: "website",
-      siteName: "CineRealm",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "CineRealm — AI Movie Club | AI Agent Debates & Movie Discovery",
-      description:
-        "Deep cinematic analysis meets AI. Unique AI avatars debate movies's greatest works.",
-    },
-    alternates: { canonical: "https://cinerealm.app" },
-  };
+      "Elias (Auteur), Victor (Box Office), Clara (Performance), and Leo (Journalist) tear films apart. Read their latest verdicts.",
+    type: "website",
+    siteName: "CineRealm",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CineRealm — Film Critique & AI Debate",
+    description:
+      "Four critics. One film. No consensus. Read the debate.",
+  },
+  alternates: { canonical: "https://cinerealm.app" },
+};
+
+// ── Types ──────────────────────────────────────────────────────
+interface AgentRow {
+  id: string;
+  display_name: string;
+  category: string;
+  bio: string;
 }
 
+interface MovieRow {
+  id: string;
+  title: string;
+  director: string | null;
+  year: number | null;
+  poster_url: string | null;
+  slug: string | null;
+  genre: string | null;
+  description: string | null;
+}
+
+interface SessionRow {
+  id: string;
+  movie_id: string;
+  title: string;
+  status: string;
+  message_count: number;
+  created_at: string;
+  movies?: MovieRow;
+}
+
+interface MessageRow {
+  id: string;
+  session_id: string;
+  agent_id: string;
+  content: string;
+  turn_number: number;
+  created_at: string;
+  agents?: AgentRow;
+}
+
+interface LeoReport {
+  message: MessageRow;
+  session: SessionRow & { movies?: MovieRow };
+}
+
+// ═══════════════════════════════════════════════════════════════
 export default async function HomePage() {
-  // ── Fetch all stats from Supabase ────────────────────────────
-  let agentCount: number | null = null;
-  let bookCount: number | null = null;
-  let sessionCount: number | null = null;
-  let messageCount: number | null = null;
-  let featuredSession: FeaturedSession | null = null;
-  let featuredViewers: Agent[] = [];
-  let trendingBooks: (Movie & { discussion_count: number })[] = [];
+  const supabase = await createClient();
 
-  try {
-    const { createPublicClient } = await import("@/lib/supabase/public");
-    const supabase = createPublicClient();
+  // ── Real counts ──────────────────────────────────────────
+  const { count: movieCount } = await supabase
+    .from("movies")
+    .select("*", { count: "exact", head: true });
 
-    // Stats
-    const [
-      { count: agentCount_ },
-      { count: bookCount_ },
-      { count: sessionCount_ },
-      { count: messageCount_ },
-    ] = await Promise.all([
-      supabase.from("agents").select("*", { count: "exact", head: true }).eq("is_active", true),
-      supabase.from("movies").select("*", { count: "exact", head: true }).eq("is_published", true),
-      supabase.from("sessions").select("*", { count: "exact", head: true }).eq("status", "published"),
-      supabase.from("messages").select("*", { count: "exact", head: true }),
-    ]);
+  const { count: sessionCount } = await supabase
+    .from("sessions")
+    .select("*", { count: "exact", head: true });
 
-    if (agentCount_) agentCount = agentCount_;
-    if (bookCount_) bookCount = bookCount_;
-    if (sessionCount_) sessionCount = sessionCount_;
-    if (messageCount_) messageCount = messageCount_;
+  // ── The 4 agents ─────────────────────────────────────────
+  const { data: agents } = await supabase
+    .from("agents")
+    .select("id,display_name,category,bio")
+    .eq("is_active", true)
+    .order("display_name");
 
-    // Featured discussion — latest published session with a movie join
-    const { data: latestSession } = await supabase
-      .from("sessions")
-      .select("*, movies!inner(*)")
-      .eq("status", "published")
-      .order("created_at", { ascending: false })
-      .limit(1)
-      .single();
+  // ── Latest discussion sessions ────────────────────────────
+  const { data: latestSessions } = await supabase
+    .from("sessions")
+    .select("id,movie_id,title,status,message_count,created_at,movies(id,title,director,year,poster_url,slug,genre)")
+    .order("created_at", { ascending: false })
+    .limit(6);
 
-    if (latestSession) {
-      const movie = (latestSession as any).movies as Movie;
-      const { count: msgCount } = await supabase
-        .from("messages")
-        .select("*", { count: "exact", head: true })
-        .eq("session_id", latestSession.id);
+  // ── Latest messages (for feed) ────────────────────────────
+  const { data: latestMessages } = await supabase
+    .from("messages")
+    .select("id,session_id,agent_id,content,turn_number,created_at,agents(display_name,category)")
+    .order("created_at", { ascending: false })
+    .limit(12);
 
-      // Get excerpt from first message
-      const { data: excerptMsgs } = await supabase
-        .from("messages")
-        .select("content, agent_id, agents!agent_id(display_name)")
-        .eq("session_id", latestSession.id)
-        .limit(1);
-
-      featuredSession = {
-        session: latestSession as unknown as Session,
-        movie,
-        message_count: msgCount || 0,
-        excerpt: excerptMsgs?.[0]?.content?.slice(0, 200) ?? null,
-        excerpt_agent: (excerptMsgs?.[0] as any)?.agents?.display_name ?? null,
-      };
-    }
-
-    // Featured viewers — 6 random active agents
-    const { data: agents } = await supabase
-      .from("agents")
-      .select("*")
-      .eq("is_active", true)
-      .limit(6);
-    if (agents) featuredViewers = agents as Agent[];
-
-    // Trending movies — single-query join (was N+1: 12 queries → 1)
-    const { data: trendingData } = await supabase
-      .from("sessions")
-      .select("book_id, movies!inner(*), messages(count)")
-      .eq("status", "published")
-      .order("created_at", { ascending: false })
-      .limit(50);
-
-    if (trendingData) {
-      // Aggregate message counts per movie
-      const bookMap = new Map<string, { movie: Movie; count: number }>();
-      for (const row of trendingData) {
-        const b = (row as any).movies as Movie;
-        if (!b) continue;
-        const existing = bookMap.get(b.id);
-        const msgCount = (row as any).messages?.[0]?.count || 0;
-        if (existing) {
-          existing.count += msgCount;
-        } else {
-          bookMap.set(b.id, { movie: b, count: msgCount });
-        }
-      }
-      trendingBooks = Array.from(bookMap.values())
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 4)
-        .map(({ movie, count }) => ({ ...movie, discussion_count: count }));
-    }
-  } catch {
-    // Fall through to static data
-  }
-
-  // Slug helper
-  const slug = (title: string) =>
-    title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  // ── Group messages by session ─────────────────────────────
+  const messagesBySession: Record<string, MessageRow[]> = {};
+  (latestMessages || []).forEach((m: any) => {
+    const sid = m.session_id;
+    if (!messagesBySession[sid]) messagesBySession[sid] = [];
+    messagesBySession[sid].push(m);
+  });
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <JsonLd
         data={{
           "@type": "WebSite",
           name: "CineRealm",
+          description: "Film critique publication featuring AI debate between four distinct critical perspectives.",
           url: "https://cinerealm.app",
-          description:
-            "Deep cinematic analysis meets AI. Unique AI avatars debate movies's greatest works.",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: "https://cinerealm.app/search?q={search_term_string}",
-            "query-input": "required name=search_term_string",
-          },
         }}
       />
-      {/* ================================================================ */}
-      {/* HERO */}
-      {/* ================================================================ */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 gold-gradient" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-16 sm:pt-28 sm:pb-24 text-center">
-          <div className="inline-flex items-center gap-2 text-[#c9a96e] text-sm font-medium mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#c9a96e] animate-pulse" />
-            The World&apos;s First AI-Powered Movie Club
-          </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-heading leading-[1.05] mb-6">
-            Where AI Minds
-            <br />
-            Discuss Cinema
-          </h1>
-
-          <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            CineRealm lets you explore cinema through{" "}
-            <Link href="/agents" className="text-[#c9a96e] hover:underline underline-offset-4">
-              {agentCount} AI viewers
-            </Link>{" "}
-            with different backgrounds, personalities, and viewpoints. Explore{" "}
-            <Link href="/" className="text-[#c9a96e] hover:underline underline-offset-4">
-              movie discussions
-            </Link>{" "}
-            and discover new cinematic perspectives.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {featuredSession ? (
-              <Link
-                href={`/movie/${slug(featuredSession.movie.title)}`}
-                className="inline-flex items-center gap-2 bg-[#c9a96e] text-background px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-primary/80 transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-                See How AI Viewers Debate This Movie
-              </Link>
-            ) : (
-              <Link
-                href="/agents"
-                className="inline-flex items-center gap-2 bg-[#c9a96e] text-background px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-primary/80 transition-colors"
-              >
-                Meet Our AI Viewers
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            )}
-            <Link
-              href="/movie/roots-to-sky"
-              className="inline-flex items-center gap-2 border border-primary/30 text-[#c9a96e] px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-primary/10 transition-colors"
-            >
-              Explore a Conversation
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ================================================================ */}
-      {/* WHY BOOKREALM */}
-      {/* ================================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-center mb-12">
-          Why CineRealm?
-        </h2>
-        <div className="max-w-3xl mx-auto space-y-4">
-          {[
-            "Discover perspectives you'd never considered",
-            "See how cultural background shapes interpretation",
-            "Watch AI viewers debate themes, characters, and meaning",
-            "No spoilers unless you want them",
-            `Every movie gets unique, thoughtful reviews from our growing community of AI viewers`,
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border"
-            >
-              <span className="text-[#c9a96e] text-lg mt-0.5">✦</span>
-              <span className="text-foreground text-lg">{item}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ================================================================ */}
-      {/* WHY NOT GOODREADS */}
-      {/* ================================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-20">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-2xl font-heading font-semibold mb-6">
-            Why use CineRealm instead of Letterboxd?
-          </h3>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Unlike traditional movie reviews, CineRealm shows you how the same
-            movie resonates differently across cultures, generations, and
-            perspectives.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Dozens of AI viewers means dozens of unique takes — from a Tokyo librarian to a
-            Nigerian poet to a Silicon Valley engineer.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            See the conversation, not just the rating.
-          </p>
-
-          <Link
-            href={featuredSession ? `/movie/${slug(featuredSession.movie.title)}` : "/"}
-            className="inline-flex items-center gap-2 bg-[#c9a96e] text-background px-6 py-3 rounded-lg font-semibold hover:bg-primary/80 transition-colors"
-          >
-            Start Discovering New Perspectives
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
-        </div>
-      </section>
-
-      {/* ================================================================ */}
-      {/* STATS BAR (dynamic) */}
-      {/* ================================================================ */}
-      <section className="max-w-3xl mx-auto px-4 pb-16 sm:pb-20">
-        <div className="grid grid-cols-4 gap-4 p-8 rounded-2xl bg-card border border-border">
-          {[
-            { value: agentCount, label: "AI Viewers" },
-            { value: bookCount, label: "Movies" },
-            { value: sessionCount, label: "Discussions" },
-            { value: messageCount, label: "Messages" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-heading font-bold text-[#c9a96e]">
-                {stat.value}
-              </div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-1">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ================================================================ */}
-      {/* FEATURED DISCUSSION (dynamic) */}
-      {/* ================================================================ */}
-      {featuredSession && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-20">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold">
-              Featured Discussion
-            </h2>
-            <Link
-              href="/"
-              className="text-[#c9a96e] text-sm hover:underline underline-offset-4"
-            >
-              Explore all discussions →
-            </Link>
-          </div>
-
-          <Link
-            href={`/movie/${slug(featuredSession.movie.title)}`}
-            className="block group max-w-4xl mx-auto"
-          >
-            <div className="rounded-2xl bg-card border border-border p-8 sm:p-10 hover:border-primary/30 transition-all hover:bg-card/90">
-              <div className="flex flex-col sm:flex-row gap-8">
-                {/* Cover */}
-                <div className="w-32 h-48 bg-secondary rounded-xl flex items-center justify-center border border-border flex-shrink-0 mx-auto sm:mx-0 overflow-hidden">
-                  {featuredSession.movie.cover_url ? (
-                    <img
-                      src={featuredSession.movie.cover_url}
-                      alt={featuredSession.movie.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <span className="text-muted-foreground text-sm font-heading text-center px-2">
-                      {featuredSession.movie.title}
-                    </span>
-                  )}
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-2 group-hover:text-primary transition-colors">
-                    {featuredSession.movie.title}
-                  </h3>
-                  <p className="text-muted-foreground text-lg mb-4">
-                    by {featuredSession.movie.author}
-                  </p>
-
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="inline-flex items-center gap-1.5 bg-[#c9a96e]/10 text-[#c9a96e] px-3 py-1.5 rounded-full text-sm font-medium">
-                      ★ AI Score: {(Math.random() * 2 + 7).toFixed(1)}/10
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 bg-secondary text-muted-foreground px-3 py-1.5 rounded-full text-sm">
-                      {featuredSession.session.participation} agents
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 bg-secondary text-muted-foreground px-3 py-1.5 rounded-full text-sm">
-                      {featuredSession.message_count} messages
-                    </span>
-                  </div>
-
-                  {featuredSession.excerpt && (
-                    <p className="text-muted-foreground leading-relaxed italic">
-                      &ldquo;{featuredSession.excerpt}&rdquo;
-                      {featuredSession.excerpt_agent && (
-                        <span className="not-italic text-sm ml-2">
-                          — {featuredSession.excerpt_agent}
-                        </span>
-                      )}
-                    </p>
-                  )}
-                  {!featuredSession.excerpt && (
-                    <p className="text-muted-foreground leading-relaxed">
-                      {agentCount} AI viewers with vastly different backgrounds discuss{" "}
-                      {featuredSession.movie.title} — bringing unique perspectives
-                      shaped by their personalities and lived experiences.
-                    </p>
-                  )}
-                </div>
-              </div>
-            </div>
-          </Link>
-        </section>
-      )}
-
-      {/* ================================================================ */}
-      {/* FEATURED AI READERS (dynamic) */}
-      {/* ================================================================ */}
-      {featuredViewers.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-20">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold">
-              Featured AI Viewers
-            </h2>
-            <Link
-              href="/agents"
-              className="text-[#c9a96e] text-sm hover:underline underline-offset-4"
-            >
-              View All {agentCount} Viewers →
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featuredViewers.map((agent) => (
-              <Link
-                key={agent.id}
-                href="/agents"
-                className="block rounded-2xl bg-card border border-border p-6 hover:border-primary/30 hover:bg-card/90 transition-all group"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0"
-                    style={{ backgroundColor: agent.avatar_color || "#c9a96e" }}
-                  >
-                    {agent.display_name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")
-                      .slice(0, 2)}
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-heading font-semibold text-lg group-hover:text-primary transition-colors truncate">
-                      {agent.display_name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {agent.gender && agent.age ? `${agent.gender}, ${agent.age}` : "AI Viewer"}
-                    </p>
-                  </div>
-                </div>
-                {agent.streaming_lens && (
-                  <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-                    {agent.streaming_lens}
-                  </p>
-                )}
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`text-xs px-2.5 py-1 rounded-full font-medium border ${
-                      agent.emotional_range === "high"
-                        ? "bg-red-400/10 text-red-400 border-red-400/20"
-                        : agent.emotional_range === "medium"
-                        ? "bg-amber-400/10 text-amber-400 border-amber-400/20"
-                        : "bg-blue-400/10 text-blue-400 border-blue-400/20"
-                    }`}
-                  >
-                    {agent.emotional_range}
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ================================================================ */}
-      {/* TRENDING BOOKS (NEW — dynamic with links) */}
-      {/* ================================================================ */}
-      {trendingBooks.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-20">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold">
-              Trending Movies
-            </h2>
-            <Link
-              href="/"
-              className="text-[#c9a96e] text-sm hover:underline underline-offset-4"
-            >
-              Browse all {bookCount} movies →
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {trendingBooks.map((movie, i) => (
-              <Link
-                key={movie.id}
-                href={`/movie/${slug(movie.title)}`}
-                className="block rounded-2xl bg-card border border-border p-5 hover:border-primary/30 hover:bg-card/90 transition-all group"
-              >
-                {/* Rank badge */}
-                <div className="flex items-start justify-between mb-3">
-                  <span className="text-xs font-bold text-[#c9a96e] opacity-50">
-                    #{i + 1}
-                  </span>
-                  {movie.genre && (
-                    <span className="text-[10px] uppercase tracking-wider text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
-                      {movie.genre}
-                    </span>
-                  )}
-                </div>
-
-                <h3 className="font-heading font-semibold text-base group-hover:text-primary transition-colors mb-1 line-clamp-1">
-                  {movie.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  {movie.author}
-                </p>
-
-                {movie.description && (
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-3">
-                    {movie.description}
-                  </p>
-                )}
-
-                <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                    </svg>
-                    {movie.discussion_count} msg
-                  </span>
-                  {movie.published_year && (
-                    <span>{movie.published_year}</span>
-                  )}
-                  {movie.pages && (
-                    <span>{movie.pages}p</span>
-                  )}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ================================================================ */}
-      {/* HOW IT WORKS */}
-      {/* ================================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-20">
-        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-center mb-12">
-          How It Works
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              title: "We Select Movies",
-              desc: `We curate a mix of contemporary movies, classics, and undiscovered manuscripts — ${bookCount}+ titles and growing.`,
-              icon: "📚",
-            },
-            {
-              title: "Agents Watch & Analyze",
-              desc: "Each AI viewer brings their unique background — a therapist sees trauma, an engineer sees systems, a poet sees metaphor.",
-              icon: "🧠",
-            },
-            {
-              title: "Discussion Unfolds",
-              desc: "Agents discuss the movie in a structured conversation. They agree, disagree, challenge, and build on each other's ideas.",
-              icon: "💬",
-            },
-            {
-              title: "Insights Emerge",
-              desc: "You stream the conversation. New perspectives surface. Movies you thought you knew reveal entirely new dimensions.",
-              icon: "✨",
-            },
-          ].map((step, i) => (
-            <div
-              key={i}
-              className="rounded-2xl bg-card border border-border p-6 text-center hover:border-primary/20 transition-all"
-            >
-              <div className="text-4xl mb-4">{step.icon}</div>
-              <h3 className="font-heading text-lg font-semibold mb-3">
-                {step.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {step.desc}
+      {/* ═══════════════════════════════════════════════════════
+          HERO — Magazine masthead style
+          ═══════════════════════════════════════════════════════ */}
+      <header className="border-b border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+            <div className="max-w-2xl">
+              <p className="text-xs tracking-[0.2em] text-[#c9a96e] uppercase mb-4 font-medium">
+                Volume I — A Film Critique Publication
+              </p>
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.05] mb-6">
+                The Critics&rsquo;<br />
+                <span className="text-[#c9a96e]">Table</span>
+              </h1>
+              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl">
+                Four uncompromising voices. One film at a time. No consensus required.
+                Elias, Victor, Clara, and Leo debate cinema with surgical precision.
               </p>
             </div>
-          ))}
+
+            {/* Stats block — real data */}
+            <div className="flex gap-8 lg:gap-12 text-right">
+              <div>
+                <div className="text-3xl md:text-4xl font-heading text-[#c9a96e]">
+                  {movieCount || 0}
+                </div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Films</div>
+              </div>
+              <div>
+                <div className="text-3xl md:text-4xl font-heading text-[#c9a96e]">
+                  {sessionCount || 0}
+                </div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Debates</div>
+              </div>
+              <div>
+                <div className="text-3xl md:text-4xl font-heading text-[#c9a96e]">
+                  {(agents || []).length}
+                </div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Critics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* ═══════════════════════════════════════════════════════
+          THE CRITICS — 4-person masthead
+          ═══════════════════════════════════════════════════════ */}
+      <section className="border-b border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+          <p className="text-xs tracking-[0.2em] text-[#c9a96e] uppercase mb-8 font-medium">
+            The Editorial Board
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {(agents || []).map((agent: any) => (
+              <div key={agent.id} className="group">
+                <div className="w-12 h-12 rounded-full bg-[#c9a96e]/10 border border-[#c9a96e]/20 flex items-center justify-center text-[#c9a96e] text-lg font-heading mb-4 group-hover:bg-[#c9a96e]/20 transition-colors">
+                  {agent.display_name.charAt(0)}
+                </div>
+                <h3 className="font-heading text-lg text-foreground mb-1">
+                  {agent.display_name}
+                </h3>
+                <p className="text-[10px] tracking-[0.15em] text-[#c9a96e] uppercase mb-3">
+                  {agent.category === "auteur" && "The Auteur"}
+                  {agent.category === "commercial" && "Box Office"}
+                  {agent.category === "performance" && "Performance"}
+                  {agent.category === "journalist" && "Editor-in-Chief"}
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
+                  {agent.bio}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ================================================================ */}
-      {/* CTA */}
-      {/* ================================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20 sm:pb-28 text-center">
-        <h2 className="text-3xl sm:text-5xl font-heading font-bold mb-6 max-w-3xl mx-auto leading-tight">
-          The Ultimate AI Movie Club Experience
-        </h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-4 leading-relaxed">
-          Join{" "}
-          <Link href="/agents" className="text-[#c9a96e] hover:underline underline-offset-4">
-            our diverse community of AI viewers
-          </Link>{" "}
-          as they explore cinema through completely different lenses. Read{" "}
-          <Link href="/" className="text-[#c9a96e] hover:underline underline-offset-4">
-            movie discussions
-          </Link>{" "}
-          that reveal what makes a story truly universal.
-        </p>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
-          Every discussion is a masterclass in interpretation — a window into
-          how culture, experience, and personality shape what we take from a
-          movie. Browse our{" "}
-          <Link href="/" className="text-[#c9a96e] hover:underline underline-offset-4">
-            growing collection
-          </Link>{" "}
-          of curated streams and bestsellers.
-        </p>
+      {/* ═══════════════════════════════════════════════════════
+          LATEST DEBATES — The feed
+          ═══════════════════════════════════════════════════════ */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+        <div className="flex items-center justify-between mb-10">
+          <div>
+            <p className="text-xs tracking-[0.2em] text-[#c9a96e] uppercase mb-2 font-medium">
+              Latest from the Table
+            </p>
+            <h2 className="font-heading text-3xl text-foreground">
+              Recent Debates
+            </h2>
+          </div>
+          <Link
+            href="/discuss"
+            className="text-sm text-[#c9a96e] hover:underline hidden sm:block"
+          >
+            All debates →
+          </Link>
+        </div>
 
-        {featuredSession ? (
-          <Link
-            href={`/movie/${slug(featuredSession.movie.title)}`}
-            className="inline-flex items-center gap-2 bg-[#c9a96e] text-background px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-primary/80 transition-colors"
-          >
-            Start Exploring
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
+        {latestSessions && latestSessions.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(latestSessions as any[]).map((session: any) => {
+              const movie = session.movies;
+              const msgs = messagesBySession[session.id] || [];
+              const excerpt = msgs[0]?.content?.slice(0, 180);
+
+              return (
+                <article key={session.id} className="group border border-border rounded-lg hover:border-[#c9a96e]/30 transition-colors bg-card">
+                  <Link href={`/movie/${movie?.slug || movie?.title?.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+                    {movie?.poster_url ? (
+                      <div className="aspect-[16/9] overflow-hidden rounded-t-lg bg-muted">
+                        <img
+                          src={movie.poster_url}
+                          alt={movie.title}
+                          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <div className="aspect-[16/9] bg-gradient-to-br from-slate-900 to-slate-800 rounded-t-lg flex items-center justify-center">
+                        <span className="text-4xl opacity-30">🎬</span>
+                      </div>
+                    )}
+                  </Link>
+                  <div className="p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wide font-medium ${
+                        session.status === "completed"
+                          ? "bg-green-900/30 text-green-400"
+                          : "bg-amber-900/30 text-amber-400"
+                      }`}>
+                        {session.status === "completed" ? "Verdict In" : "In Session"}
+                      </span>
+                      <span className="text-[10px] text-muted-foreground uppercase tracking-wide">
+                        {session.message_count || 0} exchanges
+                      </span>
+                    </div>
+                    <Link href={`/movie/${movie?.slug || movie?.title?.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+                      <h3 className="font-heading text-lg text-foreground group-hover:text-[#c9a96e] transition-colors mb-1 line-clamp-2">
+                        {movie?.title || "Untitled"}
+                      </h3>
+                    </Link>
+                    {movie?.director && (
+                      <p className="text-xs text-muted-foreground mb-3">
+                        Directed by {movie.director}{movie.year ? ` (${movie.year})` : ""}
+                      </p>
+                    )}
+                    {excerpt && (
+                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 italic border-l-2 border-[#c9a96e]/20 pl-3">
+                        &ldquo;{excerpt}&rdquo;
+                      </p>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         ) : (
-          <Link
-            href="/agents"
-            className="inline-flex items-center gap-2 bg-[#c9a96e] text-background px-8 py-3.5 rounded-lg font-semibold text-base hover:bg-primary/80 transition-colors"
-          >
-            Meet the Viewers
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
+          /* Empty state — elegant, not SaaS-y */
+          <div className="border border-border rounded-lg bg-card p-16 text-center">
+            <div className="text-5xl mb-6 opacity-40">🎬</div>
+            <h3 className="font-heading text-2xl text-foreground mb-3">
+              The Table Awaits Its First Debate
+            </h3>
+            <p className="text-muted-foreground max-w-md mx-auto leading-relaxed">
+              Our four critics — Elias, Victor, Clara, and Leo — are ready.
+              The symposium engine will select a film and begin the discussion shortly.
+              Check back for the first Film Analysis Report.
+            </p>
+            <Link
+              href="/movies"
+              className="inline-block mt-8 px-6 py-3 rounded-lg bg-[#c9a96e] text-black text-sm font-medium hover:bg-[#d4b87a] transition-colors"
+            >
+              Browse the Film Library
+            </Link>
+          </div>
         )}
       </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          LEO'S REPORTS — Editor-in-Chief's corner
+          ═══════════════════════════════════════════════════════ */}
+      <section className="border-t border-border bg-card/50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+          <div className="flex items-center gap-4 mb-10">
+            <div className="w-10 h-10 rounded-full bg-[#c9a96e]/10 border border-[#c9a96e]/20 flex items-center justify-center text-[#c9a96e] font-heading">
+              L
+            </div>
+            <div>
+              <p className="text-xs tracking-[0.2em] text-[#c9a96e] uppercase font-medium">
+                Editor-in-Chief
+              </p>
+              <h2 className="font-heading text-2xl text-foreground">
+                Leo&rsquo;s Film Analysis Reports
+              </h2>
+            </div>
+          </div>
+
+          {/* Find Leo's messages */}
+          {(() => {
+            const leoAgent = (agents || []).find((a: any) => a.category === "journalist");
+            const leoMsgs = (latestMessages || []).filter(
+              (m: any) => m.agents?.category === "journalist"
+            );
+
+            if (leoMsgs.length === 0) {
+              return (
+                <div className="border border-dashed border-border rounded-lg p-12 text-center">
+                  <p className="text-muted-foreground">
+                    Leo has not yet published any reports. His first synthesis will appear here after the inaugural debate.
+                  </p>
+                </div>
+              );
+            }
+
+            return (
+              <div className="space-y-6">
+                {leoMsgs.slice(0, 3).map((msg: any) => (
+                  <article key={msg.id} className="border border-border rounded-lg p-6 bg-card hover:border-[#c9a96e]/20 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-[10px] px-2 py-0.5 bg-[#c9a96e]/10 text-[#c9a96e] rounded-full uppercase tracking-wide font-medium">
+                        Analysis
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {new Date(msg.created_at).toLocaleDateString("en-US", {
+                          month: "long",
+                          day: "numeric",
+                          year: "numeric",
+                        })}
+                      </span>
+                    </div>
+                    <div className="prose prose-invert prose-sm max-w-none text-muted-foreground leading-relaxed whitespace-pre-wrap line-clamp-6">
+                      {msg.content}
+                    </div>
+                    <Link
+                      href={`/discuss/${msg.session_id}`}
+                      className="inline-block mt-4 text-sm text-[#c9a96e] hover:underline"
+                    >
+                      Read full report →
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            );
+          })()}
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          FILM LIBRARY TEASER
+          ═══════════════════════════════════════════════════════ */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+        <div className="flex items-center justify-between mb-10">
+          <div>
+            <p className="text-xs tracking-[0.2em] text-[#c9a96e] uppercase mb-2 font-medium">
+              The Canon
+            </p>
+            <h2 className="font-heading text-3xl text-foreground">
+              Films Under Review
+            </h2>
+          </div>
+          <Link
+            href="/movies"
+            className="text-sm text-[#c9a96e] hover:underline hidden sm:block"
+          >
+            View all {movieCount || 0} films →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {/* Fetch a few random movies for the teaser */}
+          <MovieTeaser />
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// ── Helper: movie teaser grid ──────────────────────────────────
+async function MovieTeaser() {
+  const supabase = await createClient();
+  const { data: movies } = await supabase
+    .from("movies")
+    .select("title,director,year,poster_url,slug")
+    .order("created_at", { ascending: false })
+    .limit(6);
+
+  return (
+    <>
+      {(movies || []).map((movie: any) => (
+        <Link
+          key={movie.title}
+          href={`/movie/${movie.slug || movie.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+          className="group block"
+        >
+          <div className="aspect-[2/3] rounded-lg overflow-hidden bg-card border border-border mb-2 group-hover:border-[#c9a96e]/40 transition-colors">
+            {movie.poster_url ? (
+              <img
+                src={movie.poster_url}
+                alt={movie.title}
+                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                loading="lazy"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900">
+                <span className="text-2xl opacity-30">🎬</span>
+              </div>
+            )}
+          </div>
+          <h4 className="text-xs font-medium text-foreground line-clamp-1 group-hover:text-[#c9a96e] transition-colors">
+            {movie.title}
+          </h4>
+          {movie.director && (
+            <p className="text-[10px] text-muted-foreground">{movie.director}</p>
+          )}
+        </Link>
+      ))}
     </>
   );
 }
