@@ -57,7 +57,7 @@ SUPABASE_KEY = os.getenv("CINE_SUPABASE_KEY",
 # Google AI Studio OpenAI-compatible endpoint
 LLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 LLM_URL = f"{LLM_BASE_URL}chat/completions"
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-2.5-flash"
 
 # ── Rate limiting ─────────────────────────────────────────────────
 LLM_CALL_DELAY = 2.0       # seconds between LLM calls (avoids rate limits)
