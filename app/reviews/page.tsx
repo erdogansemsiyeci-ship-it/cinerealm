@@ -101,13 +101,21 @@ export default async function ReviewsPage() {
             .single();
 
           if (leoMsg) {
-            leoExcerpt = (leoMsg as any).content
-              ?.replace(/[*_#]/g, "")
-              .replace(/\n{2,}/g, "¶ ")
-              .replace(/\n/g, " ")
-              .replace(/\s+/g, " ")
-              .trim()
-              .slice(0, 250) || null;
+            const rawContent = (leoMsg as any).content || "";
+            // Try to extract structured EXCERPT first
+            const excerptMatch = rawContent.match(/\*\*EXCERPT:\*\*\s*(.+?)(?:\n|$)/);
+            if (excerptMatch) {
+              leoExcerpt = excerptMatch[1].trim();
+            } else {
+              // Fallback: clean first 250 chars
+              leoExcerpt = rawContent
+                .replace(/[*_#]/g, "")
+                .replace(/\n{2,}/g, "¶ ")
+                .replace(/\n/g, " ")
+                .replace(/\s+/g, " ")
+                .trim()
+                .slice(0, 250) || null;
+            }
             leoDate = (leoMsg as any).created_at || null;
           }
         } catch (_) {}

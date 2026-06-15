@@ -125,6 +125,7 @@ export default async function MoviePage({
 
   // ── Fetch session + messages ─────────────────────────────
   let leoReport: string | null = null;
+  let leoVerdict: string | null = null;
   let debateMessages: DebateMessage[] = [];
 
   try {
@@ -150,7 +151,19 @@ export default async function MoviePage({
           const name = agent?.display_name || "Unknown";
 
           if (category === "journalist") {
-            leoReport = msg.content;
+            const rawContent: string = msg.content || "";
+
+            // Extract VERDICT
+            const verdictMatch = rawContent.match(/\*\*VERDICT:\*\*\s*(.+?)(?:\n|$)/);
+            if (verdictMatch) {
+              leoVerdict = verdictMatch[1].replace(/[*_]/g, "").trim();
+            }
+
+            // Clean report: strip EXCERPT and VERDICT lines
+            leoReport = rawContent
+              .replace(/\*\*EXCERPT:\*\*.*(?:\n|$)/g, "")
+              .replace(/\*\*VERDICT:\*\*.*(?:\n|$)/g, "")
+              .trim();
           } else {
             debateMessages.push({
               id: msg.id,
@@ -209,6 +222,13 @@ export default async function MoviePage({
               <span className="text-[#c9a96e] font-medium">★ {movie.rating}/10</span>
             )}
           </div>
+          {leoVerdict && (
+            <div className="mt-4 inline-block px-4 py-1.5 rounded-lg bg-[#c9a96e]/10 border border-[#c9a96e]/20">
+              <span className="text-xs tracking-[0.15em] text-[#c9a96e] uppercase font-medium">
+                Verdict: {leoVerdict}
+              </span>
+            </div>
+          )}
           {movie.genre && (
             <div className="flex flex-wrap gap-2 mt-3">
               {movie.genre.split(",").map((g: string) => (
@@ -249,16 +269,27 @@ export default async function MoviePage({
               prose-a:text-[#c9a96e] prose-a:no-underline hover:prose-a:underline
               [&_p]:mb-5 [&_p]:text-[15px] sm:[&_p]:text-base
             ">
-              {leoReport.split("\n").filter(Boolean).map((paragraph, i) => {
-                // Bold headers
-                if (/^\d+\.\s/.test(paragraph) || /^[A-Z][A-Z\s]+:/.test(paragraph)) {
+              {leoReport.split("\n").filter(Boolean).map((line, i) => {
+                // H2 heading
+                if (/^##\s/.test(line)) {
                   return (
-                    <p key={i} className="font-heading text-foreground text-lg mt-8 mb-3">
-                      {paragraph}
-                    </p>
+                    <h2 key={i} className="font-heading text-xl text-foreground mt-10 mb-4">
+                      {line.replace(/^##\s*/, "")}
+                    </h2>
                   );
                 }
-                return <p key={i}>{paragraph}</p>;
+                // H3 subheading
+                if (/^###\s/.test(line)) {
+                  return (
+                    <h3 key={i} className="font-heading text-lg text-[#c9a96e] mt-8 mb-3">
+                      {line.replace(/^###\s*/, "")}
+                    </h3>
+                  );
+                }
+                // EXCERPT/VERDICT markers (should already be stripped, but safety)
+                if (/^\*\*(EXCERPT|VERDICT):\*\*/.test(line)) return null;
+                // Regular paragraph
+                return <p key={i}>{line}</p>;
               })}
             </article>
           </section>
