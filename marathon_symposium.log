@@ -2524,3 +2524,1840 @@ Debate 13/20  [20:38:03]
   ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
   ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
   ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~117min remaining
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~48min remaining
+
+──────────────────────────────────────────────────
+Debate 68/100  [20:43:48]
+──────────────────────────────────────────────────
+
+🎬 North by Northwest (1959) — Alfred Hitchcock
+   Genre: Thriller, Adventure  |  Rating: 8.0/10
+   Session: 696be6cf...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 14/20  [20:44:20]
+──────────────────────────────────────────────────
+
+🎬 Arkansas (2020) — Clark Duke
+   Genre: Crime, Thriller, Action, Mystery  |  Rating: 5.8/10
+   Session: 3c32f3bb...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~115min remaining
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~41min remaining
+
+──────────────────────────────────────────────────
+Debate 69/100  [20:50:06]
+──────────────────────────────────────────────────
+
+🎬 Pokémon Detective Pikachu (2019) — Rob Letterman
+   Genre: Action, Adventure, Fantasy  |  Rating: 6.9/10
+   Session: 35b24503...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 15/20  [20:50:35]
+──────────────────────────────────────────────────
+
+🎬 The Martian (2015) — Ridley Scott
+   Genre: Science Fiction, Drama, Adventure  |  Rating: 7.7/10
+   Session: c3e8481b...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~113min remaining
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~34min remaining
+
+──────────────────────────────────────────────────
+Debate 70/100  [20:56:22]
+──────────────────────────────────────────────────
+
+🎬 Guardians of the Galaxy (2014) — James Gunn
+   Genre: Action, Science Fiction, Adventure  |  Rating: 7.9/10
+   Session: 49603b6f...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 16/20  [20:56:54]
+──────────────────────────────────────────────────
+
+🎬 Snow White and the Huntsman (2012) — Rupert Sanders
+   Genre: Adventure, Fantasy, Drama  |  Rating: 6.0/10
+   Session: c7bae5aa...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~110min remaining
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~27min remaining
+
+──────────────────────────────────────────────────
+Debate 71/100  [21:02:47]
+──────────────────────────────────────────────────
+
+🎬 Dune: Part Two (2024) — Denis Villeneuve
+   Genre: Science Fiction, Adventure  |  Rating: 8.1/10
+   Session: 9af645eb...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 17/20  [21:03:11]
+──────────────────────────────────────────────────
+
+🎬 How Bruce Lee Changed the World (2009) — Steve Webb
+   Genre: Documentary  |  Rating: 8.0/10
+   Session: 34a5475b...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~108min remaining
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~20min remaining
+
+──────────────────────────────────────────────────
+Debate 72/100  [21:09:27]
+──────────────────────────────────────────────────
+
+🎬 The Mummy: Tomb of the Dragon Emperor (2008) — Rob Cohen
+   Genre: Adventure, Action, Fantasy  |  Rating: 5.5/10
+   Session: b0c37573...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 18/20  [21:09:32]
+──────────────────────────────────────────────────
+
+🎬 Mortal Kombat Legends: Scorpion's Revenge (2020) — Ethan Spaulding
+   Genre: Animation, Action, Fantasy  |  Rating: 8.1/10
+   Session: 62f7af61...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~106min remaining
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~14min remaining
+
+──────────────────────────────────────────────────
+Debate 19/20  [21:16:09]
+──────────────────────────────────────────────────
+
+🎬 Dune (2021) — Denis Villeneuve
+   Genre: Science Fiction, Adventure  |  Rating: 7.8/10
+   Session: 7517aadb...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 73/100  [21:16:13]
+──────────────────────────────────────────────────
+
+🎬 Ice Age: Collision Course (2016) — Mike Thurmeier
+   Genre: Adventure, Animation, Family, Comedy, Science Fiction  |  Rating: 6.1/10
+   Session: 21532f0b...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 4/5): ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~7min remaining
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 20/20  [21:22:37]
+──────────────────────────────────────────────────
+
+🎬 No Time to Die (2021) — Cary Joji Fukunaga
+   Genre: Action, Thriller, Adventure  |  Rating: 7.3/10
+   Session: 0ec0b1ab...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~103min remaining
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 74/100  [21:23:13]
+──────────────────────────────────────────────────
+
+🎬 A Clockwork Orange (1971) — Stanley Kubrick
+   Genre: Science Fiction, Crime  |  Rating: 8.2/10
+   Session: 9ccf7f17...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ❌ Debate failed: [Errno -3] Temporary failure in name resolution
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+
+──────────────────────────────────────────────────
+Debate 75/100  [21:27:49]
+──────────────────────────────────────────────────
+
+🎬 Believe Me: The Abduction of Lisa McVey (2018) — Jim Donovan
+   Genre: Drama, TV Movie, Crime  |  Rating: 8.0/10
+   Session: 14fa27e4...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+
+============================================================
+  ✅ Symposium complete
+  Ran: 19  |  Failed: 1
+  Duration: 126.9 min
+  Finished: 2026-06-15T21:28:42.263145+00:00
+============================================================
+   ❌ Debate failed: The read operation timed out
+
+──────────────────────────────────────────────────
+Debate 76/100  [21:31:03]
+──────────────────────────────────────────────────
+
+🎬 Ted (2012) — Seth MacFarlane
+   Genre: Comedy, Fantasy  |  Rating: 6.5/10
+   Session: f8cbcf8e...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out. (read timeout=90)
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~94min remaining
+
+──────────────────────────────────────────────────
+Debate 77/100  [21:39:03]
+──────────────────────────────────────────────────
+
+🎬 Alien (1979) — Ridley Scott
+   Genre: Horror, Science Fiction  |  Rating: 8.2/10
+   Session: 8b374c05...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~91min remaining
+
+──────────────────────────────────────────────────
+Debate 78/100  [21:46:03]
+──────────────────────────────────────────────────
+
+🎬 Alita: Battle Angel (2019) — Robert Rodriguez
+   Genre: Action, Science Fiction, Adventure  |  Rating: 7.3/10
+   Session: 68a5367b...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x739e898935c0>: Failed to resolve 'openrouter.ai' ([Errno -3] Temporary failure in name resolution)"))
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ❌ Debate failed: [Errno -3] Temporary failure in name resolution
+
+──────────────────────────────────────────────────
+Debate 79/100  [21:48:30]
+──────────────────────────────────────────────────
+
+🎬 The Great Escape (1963) — John Sturges
+   Genre: Adventure, Drama, War  |  Rating: 7.9/10
+   Session: d0a725a0...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x739e898bf9e0>: Failed to resolve 'openrouter.ai' ([Errno -3] Temporary failure in name resolution)"))
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x739e898d9190>: Failed to resolve 'openrouter.ai' ([Errno -3] Temporary failure in name resolution)"))
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~84min remaining
+
+──────────────────────────────────────────────────
+Debate 80/100  [21:55:42]
+──────────────────────────────────────────────────
+
+🎬 Feast (2014) — Patrick Osborne
+   Genre: Animation, Comedy, Drama, Family  |  Rating: 7.8/10
+   Session: 844d3139...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x739e89945610>: Failed to resolve 'openrouter.ai' ([Errno -3] Temporary failure in name resolution)"))
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~81min remaining
+
+──────────────────────────────────────────────────
+Debate 81/100  [22:03:26]
+──────────────────────────────────────────────────
+
+🎬 Foe (2023) — Garth Davis
+   Genre: Science Fiction, Drama  |  Rating: 5.8/10
+   Session: 3967ce42...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~78min remaining
+
+──────────────────────────────────────────────────
+Debate 82/100  [22:10:53]
+──────────────────────────────────────────────────
+
+🎬 Home Run Showdown (2012) — Oz Scott
+   Genre: Family  |  Rating: 8.9/10
+   Session: 3436309b...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~74min remaining
+
+──────────────────────────────────────────────────
+Debate 83/100  [22:16:56]
+──────────────────────────────────────────────────
+
+🎬 The Lost World: Jurassic Park (1997) — Steven Spielberg
+   Genre: Adventure, Action, Science Fiction  |  Rating: 6.6/10
+   Session: f3d8daa4...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~70min remaining
+
+──────────────────────────────────────────────────
+Debate 84/100  [22:22:58]
+──────────────────────────────────────────────────
+
+🎬 How to Train Your Dragon: Homecoming (2019) — Tim Johnson
+   Genre: Animation, Fantasy, Adventure, Family  |  Rating: 8.0/10
+   Session: eaca1388...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~67min remaining
+
+──────────────────────────────────────────────────
+Debate 85/100  [22:29:04]
+──────────────────────────────────────────────────
+
+🎬 On the Waterfront (1954) — Elia Kazan
+   Genre: Crime, Drama, Romance  |  Rating: 7.9/10
+   Session: 9fde7d79...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~63min remaining
+
+──────────────────────────────────────────────────
+Debate 86/100  [22:35:05]
+──────────────────────────────────────────────────
+
+🎬 Blade Runner (1982) — Ridley Scott
+   Genre: Science Fiction, Drama, Thriller  |  Rating: 7.9/10
+   Session: 5df95324...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~59min remaining
+
+──────────────────────────────────────────────────
+Debate 87/100  [22:41:02]
+──────────────────────────────────────────────────
+
+🎬 I Swear (2025) — Kirk Jones
+   Genre: Drama, History  |  Rating: 8.3/10
+   Session: 5b33d79e...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~55min remaining
+
+──────────────────────────────────────────────────
+Debate 88/100  [22:46:59]
+──────────────────────────────────────────────────
+
+🎬 Happy Feet (2006) — George Miller
+   Genre: Animation, Comedy, Family  |  Rating: 6.2/10
+   Session: b13ee7c7...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~51min remaining
+
+──────────────────────────────────────────────────
+Debate 89/100  [22:53:03]
+──────────────────────────────────────────────────
+
+🎬 Maleficent: Mistress of Evil (2019) — Joachim Rønning
+   Genre: Family, Fantasy, Adventure  |  Rating: 7.3/10
+   Session: 1ce19871...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~47min remaining
+
+──────────────────────────────────────────────────
+Debate 90/100  [22:59:03]
+──────────────────────────────────────────────────
+
+🎬 Dawn of the Planet of the Apes (2014) — Matt Reeves
+   Genre: Science Fiction, Action, Drama, Thriller  |  Rating: 7.3/10
+   Session: 4c4251aa...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~43min remaining
+
+──────────────────────────────────────────────────
+Debate 91/100  [23:05:02]
+──────────────────────────────────────────────────
+
+🎬 Skyfall (2012) — Sam Mendes
+   Genre: Action, Adventure, Thriller  |  Rating: 7.3/10
+   Session: 6dc6768d...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~39min remaining
+
+──────────────────────────────────────────────────
+Debate 92/100  [23:11:01]
+──────────────────────────────────────────────────
+
+🎬 Blackfish (2013) — Gabriela Cowperthwaite
+   Genre: Documentary  |  Rating: 7.8/10
+   Session: ad8fc1d1...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~35min remaining
+
+──────────────────────────────────────────────────
+Debate 93/100  [23:17:06]
+──────────────────────────────────────────────────
+
+🎬 Pink Floyd: Live at Pompeii (1972) — Adrian Maben
+   Genre: Music, Documentary  |  Rating: 8.0/10
+   Session: ce47b21b...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~31min remaining
+
+──────────────────────────────────────────────────
+Debate 94/100  [23:23:18]
+──────────────────────────────────────────────────
+
+🎬 Star Trek Into Darkness (2013) — J.J. Abrams
+   Genre: Action, Adventure, Science Fiction  |  Rating: 7.3/10
+   Session: 7d0d3ce5...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   7/7 Leo (Synthesis)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ✅ Debate complete — 7 messages
+   ⏳ Cooldown 30s  |  ~27min remaining
+
+──────────────────────────────────────────────────
+Debate 95/100  [23:29:34]
+──────────────────────────────────────────────────
+
+🎬 EPiC: Elvis Presley in Concert (2026) — Baz Luhrmann
+   Genre: Music, Documentary  |  Rating: 8.3/10
+   Session: 28336786...
+   1/7 Elias (Auteur)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   2/7 Victor (Box Office)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   3/7 Clara (Performance)...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   4/7 Elias responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   5/7 Victor responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   6/7 Clara responds...
+  ⚠ LLM error (attempt 1/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 2/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 3/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+  ⚠ LLM error (attempt 4/5): HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x739e8997da00>: Failed to resolve 'openrouter.ai' ([Errno -3] Temporary failure in name resolution)"))
+  ⚠ LLM error (attempt 5/5): 403 Client Error: Forbidden for url: https://openrouter.ai/api/v1/chat/completions
+   ❌ Debate failed: [Errno -3] Temporary failure in name resolution
+Traceback (most recent call last):
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/erdogansemsiyeci/cinerealm/cinematic_symposium.py", line 435, in <module>
+    
+  File "/home/erdogansemsiyeci/cinerealm/cinematic_symposium.py", line 395, in main
+    for i in range(args.count):
+               ^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/cinerealm/cinematic_symposium.py", line 189, in pick_random_film
+    """Pick a random film that hasn't been debated yet."""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/postgrest/_sync/request_builder.py", line 90, in execute
+    r = send_with_retry(self.request)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/postgrest/_sync/request_builder.py", line 51, in send_with_retry
+    resp = req.send(headers)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/postgrest/base_request_builder.py", line 90, in send
+    return self.session.request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/erdogansemsiyeci/.local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
